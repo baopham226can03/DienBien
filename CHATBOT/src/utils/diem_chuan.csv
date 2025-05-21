@@ -1,0 +1,720 @@
+,id,ten_nganh,nam,phuong_thuc,loai_xet,diem_chuan
+0,1,Công nghệ thực phẩm,2016,1,Điểm thi THPT,20.25
+1,2,Đảm bảo chất lượng & ATTP,2016,1,Điểm thi THPT,19.0
+2,3,Công nghệ chế biến thủy sản,2016,1,Điểm thi THPT,17.75
+3,4,Quản trị kinh doanh,2016,1,Điểm thi THPT,19.0
+4,5,Kế toán,2016,1,Điểm thi THPT,18.75
+5,6,Tài chính ngân hàng,2016,1,Điểm thi THPT,18.25
+6,7,Công nghệ kỹ thuật hóa học,2016,1,Điểm thi THPT,19.0
+7,8,Công nghệ vật liệu,2016,1,Điểm thi THPT,15.0
+8,9,Công nghệ kỹ thuật môi trường,2016,1,Điểm thi THPT,18.0
+9,10,Công nghệ sinh học,2016,1,Điểm thi THPT,19.0
+10,11,Công nghệ thông tin,2016,1,Điểm thi THPT,18.0
+11,12,"Công nghệ dệt, may",2016,1,Điểm thi THPT,17.0
+12,13,Công nghệ chế tạo máy,2016,1,Điểm thi THPT,17.25
+13,14,Công nghệ kỹ thuật cơ điện tử,2016,1,Điểm thi THPT,16.0
+14,15,Công nghệ kỹ thuật điện - điện tử,2016,1,Điểm thi THPT,18.0
+15,16,Khoa học dinh dưỡng và ẩm thực,2016,1,Điểm thi THPT,15.5
+16,17,Quản trị dịch vụ du lịch và lữ hành,2016,1,Điểm thi THPT,16.0
+17,18,Công nghệ thực phẩm,2017,1,Điểm thi THPT,23.0
+18,19,Đảm bảo chất lượng & ATTP,2017,1,Điểm thi THPT,20.75
+19,20,Công nghệ chế biến thủy sản,2017,1,Điểm thi THPT,18.25
+20,21,Quản trị kinh doanh,2017,1,Điểm thi THPT,20.0
+21,22,Kế toán,2017,1,Điểm thi THPT,19.25
+22,23,Tài chính ngân hàng,2017,1,Điểm thi THPT,18.75
+23,24,Công nghệ kỹ thuật hóa học,2017,1,Điểm thi THPT,17.5
+24,25,Công nghệ vật liệu,2017,1,Điểm thi THPT,16.25
+25,26,Công nghệ kỹ thuật môi trường,2017,1,Điểm thi THPT,17.0
+26,27,Quản lý tài nguyên và môi trường,2017,1,Điểm thi THPT,16.0
+27,28,Công nghệ sinh học,2017,1,Điểm thi THPT,20.5
+28,29,Công nghệ thông tin,2017,1,Điểm thi THPT,19.5
+29,30,An toàn thông tin,2017,1,Điểm thi THPT,16.0
+30,31,"Công nghệ dệt, may",2017,1,Điểm thi THPT,20.0
+31,32,Công nghệ chế tạo máy,2017,1,Điểm thi THPT,17.5
+32,33,Công nghệ kỹ thuật cơ điện tử,2017,1,Điểm thi THPT,18.5
+33,34,Công nghệ kỹ thuật điện - điện tử,2017,1,Điểm thi THPT,18.5
+34,35,Công nghệ kỹ thuật điều khiển và tự động hóa,2017,1,Điểm thi THPT,16.0
+35,36,Khoa học dinh dưỡng và ẩm thực,2017,1,Điểm thi THPT,19.0
+36,37,Quản trị dịch vụ du lịch và lữ hành,2017,1,Điểm thi THPT,19.75
+37,38,Quản trị nhà hàng và dịch vụ ăn uống,2017,1,Điểm thi THPT,19.25
+38,39,Ngôn ngữ Anh,2017,1,Điểm thi THPT,18.5
+39,40,Công nghệ thực phẩm,2018,1,Điểm thi THPT,18.75
+40,41,Đảm bảo chất lượng & ATTP,2018,1,Điểm thi THPT,17.0
+41,42,Công nghệ chế biến thủy sản,2018,1,Điểm thi THPT,15.0
+42,43,Quản trị kinh doanh,2018,1,Điểm thi THPT,17.0
+43,44,Kế toán,2018,1,Điểm thi THPT,17.0
+44,45,Tài chính ngân hàng,2018,1,Điểm thi THPT,17.0
+45,46,Công nghệ kỹ thuật hóa học,2018,1,Điểm thi THPT,16.0
+46,47,Công nghệ vật liệu,2018,1,Điểm thi THPT,15.0
+47,48,Công nghệ kỹ thuật môi trường,2018,1,Điểm thi THPT,15.0
+48,49,Quản lý tài nguyên và môi trường,2018,1,Điểm thi THPT,16.0
+49,50,Công nghệ sinh học,2018,1,Điểm thi THPT,16.5
+50,51,Công nghệ thông tin,2018,1,Điểm thi THPT,16.5
+51,52,An toàn thông tin,2018,1,Điểm thi THPT,16.0
+52,53,"Công nghệ dệt, may",2018,1,Điểm thi THPT,16.75
+53,54,Công nghệ chế tạo máy,2018,1,Điểm thi THPT,16.0
+54,55,Công nghệ kỹ thuật cơ điện tử,2018,1,Điểm thi THPT,16.0
+55,56,Công nghệ kỹ thuật điện - điện tử,2018,1,Điểm thi THPT,16.0
+56,57,Công nghệ kỹ thuật điều khiển và tự động hóa,2018,1,Điểm thi THPT,16.0
+57,58,Khoa học dinh dưỡng và ẩm thực,2018,1,Điểm thi THPT,16.5
+58,59,Khoa học chế biến món ăn,2018,1,Điểm thi THPT,16.25
+59,60,Quản trị dịch vụ du lịch và lữ hành,2018,1,Điểm thi THPT,17.0
+60,61,Quản trị nhà hàng và dịch vụ ăn uống,2018,1,Điểm thi THPT,17.0
+61,62,Công nghệ thực phẩm,2019,1,Điểm thi THPT,20.25
+62,63,Đảm bảo chất lượng & ATTP,2019,1,Điểm thi THPT,16.55
+63,64,Công nghệ chế biến thủy sản,2019,1,Điểm thi THPT,15.0
+64,65,Khoa học thủy sản,2019,1,Điểm thi THPT,15.6
+65,66,Quản trị kinh doanh,2019,1,Điểm thi THPT,19.0
+66,67,Kinh doanh quốc tế,2019,1,Điểm thi THPT,18.0
+67,68,Kế toán,2019,1,Điểm thi THPT,18.0
+68,69,Tài chính ngân hàng,2019,1,Điểm thi THPT,18.0
+69,70,Luật kinh tế,2019,1,Điểm thi THPT,17.05
+70,71,Công nghệ kỹ thuật hóa học,2019,1,Điểm thi THPT,16.1
+71,72,Công nghệ vật liệu,2019,1,Điểm thi THPT,15.1
+72,73,Công nghệ kỹ thuật môi trường,2019,1,Điểm thi THPT,16.05
+73,74,Quản lý tài nguyên và môi trường,2019,1,Điểm thi THPT,16.0
+74,75,Công nghệ sinh học,2019,1,Điểm thi THPT,16.05
+75,76,Công nghệ thông tin,2019,1,Điểm thi THPT,16.5
+76,77,An toàn thông tin,2019,1,Điểm thi THPT,15.05
+77,78,"Công nghệ dệt, may",2019,1,Điểm thi THPT,16.5
+78,79,Công nghệ chế tạo máy,2019,1,Điểm thi THPT,16.0
+79,80,Công nghệ kỹ thuật cơ điện tử,2019,1,Điểm thi THPT,16.0
+80,81,Công nghệ kỹ thuật điện - điện tử,2019,1,Điểm thi THPT,16.0
+81,82,Công nghệ kỹ thuật điều khiển và tự động hóa,2019,1,Điểm thi THPT,16.0
+82,83,Khoa học dinh dưỡng và ẩm thực,2019,1,Điểm thi THPT,17.0
+83,84,Khoa học chế biến món ăn,2019,1,Điểm thi THPT,16.5
+84,85,Quản trị dịch vụ du lịch và lữ hành,2019,1,Điểm thi THPT,18.0
+85,86,Quản trị nhà hàng và dịch vụ ăn uống,2019,1,Điểm thi THPT,20.0
+86,87,Ngôn ngữ Anh,2019,1,Điểm thi THPT,19.75
+87,88,Công nghệ thực phẩm,2020,1,Điểm thi THPT,22.5
+88,89,Đảm bảo chất lượng & ATTP,2020,1,Điểm thi THPT,17.0
+89,90,Công nghệ chế biến thủy sản,2020,1,Điểm thi THPT,15.0
+90,91,Khoa học thủy sản,2020,1,Điểm thi THPT,17.0
+91,92,Quản trị kinh doanh,2020,1,Điểm thi THPT,22.0
+92,93,Kinh doanh quốc tế,2020,1,Điểm thi THPT,20.0
+93,94,Kế toán,2020,1,Điểm thi THPT,20.0
+94,95,Tài chính ngân hàng,2020,1,Điểm thi THPT,20.0
+95,96,Luật kinh tế,2020,1,Điểm thi THPT,19.0
+96,97,Công nghệ kỹ thuật hóa học,2020,1,Điểm thi THPT,16.0
+97,98,Công nghệ vật liệu,2020,1,Điểm thi THPT,17.0
+98,99,Công nghệ kỹ thuật môi trường,2020,1,Điểm thi THPT,17.0
+99,100,Quản lý tài nguyên và môi trường,2020,1,Điểm thi THPT,17.0
+100,101,Công nghệ sinh học,2020,1,Điểm thi THPT,16.5
+101,102,Công nghệ thông tin,2020,1,Điểm thi THPT,19.0
+102,103,An toàn thông tin,2020,1,Điểm thi THPT,15.0
+103,104,"Công nghệ dệt, may",2020,1,Điểm thi THPT,17.0
+104,105,Công nghệ chế tạo máy,2020,1,Điểm thi THPT,16.0
+105,106,Công nghệ kỹ thuật cơ điện tử,2020,1,Điểm thi THPT,16.0
+106,107,Công nghệ kỹ thuật điện - điện tử,2020,1,Điểm thi THPT,16.0
+107,108,Công nghệ kỹ thuật điều khiển và tự động hóa,2020,1,Điểm thi THPT,16.0
+108,109,Khoa học dinh dưỡng và ẩm thực,2020,1,Điểm thi THPT,17.0
+109,110,Khoa học chế biến món ăn,2020,1,Điểm thi THPT,16.5
+110,111,Quản trị dịch vụ du lịch và lữ hành,2020,1,Điểm thi THPT,19.0
+111,112,Quản trị nhà hàng và dịch vụ ăn uống,2020,1,Điểm thi THPT,22.0
+112,113,Quản trị khách sạn,2020,1,Điểm thi THPT,18.0
+113,114,Ngôn ngữ Anh,2020,1,Điểm thi THPT,22.0
+114,115,Ngôn ngữ Trung Quốc,2020,1,Điểm thi THPT,20.5
+115,116,Công nghệ thực phẩm,2021,1,Điểm thi THPT,24.0
+116,117,Đảm bảo chất lượng & ATTP,2021,1,Điểm thi THPT,18.0
+117,118,Công nghệ chế biến thủy sản,2021,1,Điểm thi THPT,16.0
+118,119,Khoa học thủy sản,2021,1,Điểm thi THPT,16.0
+119,120,Quản trị kinh doanh thực phẩm,2021,1,Điểm thi THPT,20.0
+120,121,Quản trị kinh doanh,2021,1,Điểm thi THPT,23.75
+121,122,Kinh doanh quốc tế,2021,1,Điểm thi THPT,23.5
+122,123,Marketing,2021,1,Điểm thi THPT,24.0
+123,124,Kế toán,2021,1,Điểm thi THPT,22.75
+124,125,Tài chính ngân hàng,2021,1,Điểm thi THPT,22.75
+125,126,Luật kinh tế,2021,1,Điểm thi THPT,21.5
+126,127,Công nghệ kỹ thuật hóa học,2021,1,Điểm thi THPT,16.0
+127,128,Kỹ thuật hóa phân tích,2021,1,Điểm thi THPT,16.0
+128,129,Công nghệ vật liệu,2021,1,Điểm thi THPT,16.0
+129,130,Công nghệ kỹ thuật môi trường,2021,1,Điểm thi THPT,16.0
+130,131,Quản lý tài nguyên và môi trường,2021,1,Điểm thi THPT,16.0
+131,132,Công nghệ sinh học,2021,1,Điểm thi THPT,16.5
+132,133,Công nghệ thông tin,2021,1,Điểm thi THPT,22.5
+133,134,An toàn thông tin,2021,1,Điểm thi THPT,16.0
+134,135,Kinh doanh thời trang và Dệt may,2021,1,Điểm thi THPT,16.0
+135,136,"Công nghệ dệt, may",2021,1,Điểm thi THPT,16.0
+136,137,Công nghệ chế tạo máy,2021,1,Điểm thi THPT,16.0
+137,138,Công nghệ kỹ thuật cơ điện tử,2021,1,Điểm thi THPT,16.0
+138,139,Kỹ thuật Nhiệt,2021,1,Điểm thi THPT,16.0
+139,140,Công nghệ kỹ thuật điện - điện tử,2021,1,Điểm thi THPT,16.0
+140,141,Công nghệ kỹ thuật điều khiển và tự động hóa,2021,1,Điểm thi THPT,17.0
+141,142,Quản lý năng lượng,2021,1,Điểm thi THPT,16.0
+142,143,Khoa học dinh dưỡng và ẩm thực,2021,1,Điểm thi THPT,16.5
+143,144,Khoa học chế biến món ăn,2021,1,Điểm thi THPT,16.5
+144,145,Quản trị dịch vụ du lịch và lữ hành,2021,1,Điểm thi THPT,22.5
+145,146,Quản trị nhà hàng và dịch vụ ăn uống,2021,1,Điểm thi THPT,22.5
+146,147,Quản trị khách sạn,2021,1,Điểm thi THPT,22.5
+147,148,Ngôn ngữ Anh,2021,1,Điểm thi THPT,23.5
+148,149,Ngôn ngữ Trung Quốc,2021,1,Điểm thi THPT,23.0
+149,150,Công nghệ thực phẩm,2022,1,Điểm thi THPT,22.5
+150,151,Đảm bảo chất lượng & ATTP,2022,1,Điểm thi THPT,20.5
+151,152,Công nghệ chế biến thủy sản,2022,1,Điểm thi THPT,16.0
+152,153,Quản trị kinh doanh thực phẩm,2022,1,Điểm thi THPT,21.75
+153,154,Quản trị kinh doanh,2022,1,Điểm thi THPT,23.0
+154,155,Kinh doanh quốc tế,2022,1,Điểm thi THPT,23.5
+155,156,Marketing,2022,1,Điểm thi THPT,24.0
+156,157,Kế toán,2022,1,Điểm thi THPT,23.5
+157,158,Tài chính ngân hàng,2022,1,Điểm thi THPT,23.5
+158,159,Luật kinh tế,2022,1,Điểm thi THPT,23.0
+159,160,Công nghệ kỹ thuật hóa học,2022,1,Điểm thi THPT,17.25
+160,161,Công nghệ vật liệu,2022,1,Điểm thi THPT,16.0
+161,162,Công nghệ kỹ thuật môi trường,2022,1,Điểm thi THPT,16.0
+162,163,Quản lý tài nguyên và môi trường,2022,1,Điểm thi THPT,16.0
+163,164,Công nghệ sinh học,2022,1,Điểm thi THPT,21.0
+164,165,Công nghệ thông tin,2022,1,Điểm thi THPT,23.5
+165,166,An toàn thông tin,2022,1,Điểm thi THPT,22.25
+166,167,Kinh doanh thời trang và Dệt may,2022,1,Điểm thi THPT,19.75
+167,168,"Công nghệ dệt, may",2022,1,Điểm thi THPT,19.75
+168,169,Công nghệ chế tạo máy,2022,1,Điểm thi THPT,17.25
+169,170,Công nghệ kỹ thuật cơ điện tử,2022,1,Điểm thi THPT,21.0
+170,171,Kỹ thuật Nhiệt,2022,1,Điểm thi THPT,17.5
+171,172,Công nghệ kỹ thuật điện - điện tử,2022,1,Điểm thi THPT,21.0
+172,173,Công nghệ kỹ thuật điều khiển và tự động hóa,2022,1,Điểm thi THPT,21.0
+173,174,Quản lý năng lượng,2022,1,Điểm thi THPT,16.0
+174,175,Khoa học dinh dưỡng và ẩm thực,2022,1,Điểm thi THPT,16.5
+175,176,Khoa học chế biến món ăn,2022,1,Điểm thi THPT,16.5
+176,177,Quản trị dịch vụ du lịch và lữ hành,2022,1,Điểm thi THPT,23.0
+177,178,Quản trị nhà hàng và dịch vụ ăn uống,2022,1,Điểm thi THPT,22.5
+178,179,Quản trị khách sạn,2022,1,Điểm thi THPT,22.5
+179,180,Ngôn ngữ Anh,2022,1,Điểm thi THPT,23.5
+180,181,Ngôn ngữ Trung Quốc,2022,1,Điểm thi THPT,24.0
+181,182,Công nghệ thực phẩm,2023,1,Điểm thi THPT,21.0
+182,183,Đảm bảo chất lượng & ATTP,2023,1,Điểm thi THPT,18.0
+183,184,Công nghệ chế biến thủy sản,2023,1,Điểm thi THPT,16.0
+184,185,Quản trị kinh doanh thực phẩm,2023,1,Điểm thi THPT,18.0
+185,186,Quản trị kinh doanh,2023,1,Điểm thi THPT,21.0
+186,187,Kinh doanh quốc tế,2023,1,Điểm thi THPT,21.5
+187,188,Marketing,2023,1,Điểm thi THPT,22.5
+188,189,Thương mại điện tử,2023,1,Điểm thi THPT,22.0
+189,190,Kế toán,2023,1,Điểm thi THPT,20.0
+190,191,Tài chính ngân hàng,2023,1,Điểm thi THPT,20.5
+191,192,Công nghệ tài chính,2023,1,Điểm thi THPT,18.5
+192,193,Luật kinh tế,2023,1,Điểm thi THPT,19.0
+193,194,Công nghệ kỹ thuật hóa học,2023,1,Điểm thi THPT,16.0
+194,195,Công nghệ kỹ thuật môi trường,2023,1,Điểm thi THPT,16.0
+195,196,Quản lý tài nguyên và môi trường,2023,1,Điểm thi THPT,16.0
+196,197,Công nghệ sinh học,2023,1,Điểm thi THPT,16.0
+197,198,Công nghệ thông tin,2023,1,Điểm thi THPT,21.0
+198,199,An toàn thông tin,2023,1,Điểm thi THPT,16.5
+199,200,Khoa học dữ liệu,2023,1,Điểm thi THPT,16.75
+200,201,Kinh doanh thời trang và Dệt may,2023,1,Điểm thi THPT,16.0
+201,202,"Công nghệ dệt, may",2023,1,Điểm thi THPT,16.0
+202,203,Công nghệ chế tạo máy,2023,1,Điểm thi THPT,16.0
+203,204,Công nghệ kỹ thuật cơ điện tử,2023,1,Điểm thi THPT,16.0
+204,205,Kỹ thuật Nhiệt,2023,1,Điểm thi THPT,16.0
+205,206,Công nghệ kỹ thuật điện - điện tử,2023,1,Điểm thi THPT,16.0
+206,207,Công nghệ kỹ thuật điều khiển và tự động hóa,2023,1,Điểm thi THPT,16.5
+207,208,Khoa học dinh dưỡng và ẩm thực,2023,1,Điểm thi THPT,16.0
+208,209,Khoa học chế biến món ăn,2023,1,Điểm thi THPT,16.0
+209,210,Quản trị dịch vụ du lịch và lữ hành,2023,1,Điểm thi THPT,18.0
+210,211,Quản trị nhà hàng và dịch vụ ăn uống,2023,1,Điểm thi THPT,18.0
+211,212,Quản trị khách sạn,2023,1,Điểm thi THPT,18.0
+212,213,Ngôn ngữ Anh,2023,1,Điểm thi THPT,21.0
+213,214,Ngôn ngữ Trung Quốc,2023,1,Điểm thi THPT,21.0
+214,215,Công nghệ thực phẩm,2024,1,Điểm thi THPT,23.0
+215,216,Đảm bảo chất lượng & ATTP,2024,1,Điểm thi THPT,18.0
+216,217,Công nghệ chế biến thủy sản,2024,1,Điểm thi THPT,17.0
+217,218,Quản trị kinh doanh thực phẩm,2024,1,Điểm thi THPT,20.0
+218,219,Quản trị kinh doanh,2024,1,Điểm thi THPT,23.0
+219,220,Kinh doanh quốc tế,2024,1,Điểm thi THPT,23.25
+220,221,Marketing,2024,1,Điểm thi THPT,24.5
+221,222,Thương mại điện tử,2024,1,Điểm thi THPT,23.75
+222,223,Logistics và quản lý chuỗi cung ứng,2024,1,Điểm thi THPT,23.75
+223,224,Kế toán,2024,1,Điểm thi THPT,22.5
+224,225,Tài chính ngân hàng,2024,1,Điểm thi THPT,23.0
+225,226,Công nghệ tài chính,2024,1,Điểm thi THPT,20.75
+226,227,Luật kinh tế,2024,1,Điểm thi THPT,22.75
+227,228,Công nghệ kỹ thuật hóa học,2024,1,Điểm thi THPT,17.0
+228,229,Công nghệ kỹ thuật môi trường,2024,1,Điểm thi THPT,17.0
+229,230,Quản lý tài nguyên và môi trường,2024,1,Điểm thi THPT,17.0
+230,231,Công nghệ sinh học,2024,1,Điểm thi THPT,17.75
+231,232,Công nghệ thông tin,2024,1,Điểm thi THPT,23.0
+232,233,An toàn thông tin,2024,1,Điểm thi THPT,20.0
+233,234,Khoa học dữ liệu,2024,1,Điểm thi THPT,20.0
+234,235,Kinh doanh thời trang và Dệt may,2024,1,Điểm thi THPT,18.0
+235,236,"Công nghệ dệt, may",2024,1,Điểm thi THPT,17.0
+236,237,Công nghệ chế tạo máy,2024,1,Điểm thi THPT,18.0
+237,238,Công nghệ kỹ thuật cơ điện tử,2024,1,Điểm thi THPT,18.5
+238,239,Kỹ thuật Nhiệt,2024,1,Điểm thi THPT,17.5
+239,240,Công nghệ kỹ thuật điện - điện tử,2024,1,Điểm thi THPT,18.0
+240,241,Công nghệ kỹ thuật điều khiển và tự động hóa,2024,1,Điểm thi THPT,18.75
+241,242,Khoa học dinh dưỡng và ẩm thực,2024,1,Điểm thi THPT,17.0
+242,243,Khoa học chế biến món ăn,2024,1,Điểm thi THPT,17.5
+243,244,Quản trị dịch vụ du lịch và lữ hành,2024,1,Điểm thi THPT,21.0
+244,245,Quản trị nhà hàng và dịch vụ ăn uống,2024,1,Điểm thi THPT,21.0
+245,246,Quản trị khách sạn,2024,1,Điểm thi THPT,21.0
+246,247,Ngôn ngữ Anh,2024,1,Điểm thi THPT,23.0
+247,248,Ngôn ngữ Trung Quốc,2024,1,Điểm thi THPT,23.25
+248,249,Công nghệ chế biến thủy sản,2016,2,Điểm học bạ THPT,22.0
+249,250,Quản trị kinh doanh,2016,2,Điểm học bạ THPT,23.0
+250,251,Kế toán,2016,2,Điểm học bạ THPT,23.0
+251,252,Tài chính ngân hàng,2016,2,Điểm học bạ THPT,22.5
+252,253,Công nghệ kỹ thuật hóa học,2016,2,Điểm học bạ THPT,23.0
+253,254,Công nghệ vật liệu,2016,2,Điểm học bạ THPT,20.0
+254,255,Công nghệ kỹ thuật môi trường,2016,2,Điểm học bạ THPT,23.0
+255,256,Công nghệ thông tin,2016,2,Điểm học bạ THPT,23.0
+256,257,"Công nghệ dệt, may",2016,2,Điểm học bạ THPT,22.0
+257,258,Công nghệ chế tạo máy,2016,2,Điểm học bạ THPT,21.0
+258,259,Công nghệ kỹ thuật cơ điện tử,2016,2,Điểm học bạ THPT,20.0
+259,260,Công nghệ kỹ thuật điện - điện tử,2016,2,Điểm học bạ THPT,22.0
+260,261,Khoa học dinh dưỡng và ẩm thực,2016,2,Điểm học bạ THPT,20.0
+261,262,Quản trị dịch vụ du lịch và lữ hành,2016,2,Điểm học bạ THPT,20.0
+262,263,Công nghệ thực phẩm,2017,2,Điểm học bạ THPT,24.0
+263,264,Đảm bảo chất lượng & ATTP,2017,2,Điểm học bạ THPT,21.5
+264,265,Công nghệ chế biến thủy sản,2017,2,Điểm học bạ THPT,20.0
+265,266,Quản trị kinh doanh,2017,2,Điểm học bạ THPT,22.0
+266,267,Kế toán,2017,2,Điểm học bạ THPT,22.0
+267,268,Tài chính ngân hàng,2017,2,Điểm học bạ THPT,21.5
+268,269,Công nghệ kỹ thuật hóa học,2017,2,Điểm học bạ THPT,21.0
+269,270,Công nghệ vật liệu,2017,2,Điểm học bạ THPT,18.0
+270,271,Công nghệ kỹ thuật môi trường,2017,2,Điểm học bạ THPT,20.0
+271,272,Quản lý tài nguyên và môi trường,2017,2,Điểm học bạ THPT,18.0
+272,273,Công nghệ sinh học,2017,2,Điểm học bạ THPT,21.5
+273,274,Công nghệ thông tin,2017,2,Điểm học bạ THPT,21.5
+274,275,An toàn thông tin,2017,2,Điểm học bạ THPT,18.0
+275,276,"Công nghệ dệt, may",2017,2,Điểm học bạ THPT,21.0
+276,277,Công nghệ chế tạo máy,2017,2,Điểm học bạ THPT,20.0
+277,278,Công nghệ kỹ thuật cơ điện tử,2017,2,Điểm học bạ THPT,21.0
+278,279,Công nghệ kỹ thuật điện - điện tử,2017,2,Điểm học bạ THPT,20.0
+279,280,Khoa học dinh dưỡng và ẩm thực,2017,2,Điểm học bạ THPT,21.0
+280,281,Quản trị dịch vụ du lịch và lữ hành,2017,2,Điểm học bạ THPT,21.0
+281,282,Quản trị nhà hàng và dịch vụ ăn uống,2017,2,Điểm học bạ THPT,21.0
+282,283,Ngôn ngữ Anh,2017,2,Điểm học bạ THPT,20.0
+283,284,Công nghệ thực phẩm,2018,2,Điểm học bạ THPT,24.75
+284,285,Đảm bảo chất lượng & ATTP,2018,2,Điểm học bạ THPT,21.75
+285,286,Công nghệ chế biến thủy sản,2018,2,Điểm học bạ THPT,20.0
+286,287,Quản trị kinh doanh,2018,2,Điểm học bạ THPT,22.85
+287,288,Kế toán,2018,2,Điểm học bạ THPT,22.75
+288,289,Tài chính ngân hàng,2018,2,Điểm học bạ THPT,21.75
+289,290,Công nghệ kỹ thuật hóa học,2018,2,Điểm học bạ THPT,21.6
+290,291,Công nghệ vật liệu,2018,2,Điểm học bạ THPT,20.0
+291,292,Công nghệ kỹ thuật môi trường,2018,2,Điểm học bạ THPT,20.0
+292,293,Quản lý tài nguyên và môi trường,2018,2,Điểm học bạ THPT,20.0
+293,294,Công nghệ sinh học,2018,2,Điểm học bạ THPT,21.8
+294,295,Công nghệ thông tin,2018,2,Điểm học bạ THPT,21.8
+295,296,An toàn thông tin,2018,2,Điểm học bạ THPT,20.0
+296,297,"Công nghệ dệt, may",2018,2,Điểm học bạ THPT,21.5
+297,298,Công nghệ chế tạo máy,2018,2,Điểm học bạ THPT,21.0
+298,299,Công nghệ kỹ thuật cơ điện tử,2018,2,Điểm học bạ THPT,21.0
+299,300,Công nghệ kỹ thuật điện - điện tử,2018,2,Điểm học bạ THPT,21.0
+300,301,Công nghệ kỹ thuật điều khiển và tự động hóa,2018,2,Điểm học bạ THPT,21.0
+301,302,Khoa học dinh dưỡng và ẩm thực,2018,2,Điểm học bạ THPT,21.0
+302,303,Quản trị dịch vụ du lịch và lữ hành,2018,2,Điểm học bạ THPT,22.25
+303,304,Quản trị nhà hàng và dịch vụ ăn uống,2018,2,Điểm học bạ THPT,22.4
+304,305,Ngôn ngữ Anh,2018,2,Điểm học bạ THPT,22.75
+305,306,Công nghệ thực phẩm,2019,2,Điểm học bạ THPT,68.0
+306,307,Đảm bảo chất lượng & ATTP,2019,2,Điểm học bạ THPT,60.0
+307,308,Công nghệ chế biến thủy sản,2019,2,Điểm học bạ THPT,54.0
+308,309,Khoa học thủy sản,2019,2,Điểm học bạ THPT,54.0
+309,310,Quản trị kinh doanh,2019,2,Điểm học bạ THPT,64.0
+310,311,Kinh doanh quốc tế,2019,2,Điểm học bạ THPT,60.0
+311,312,Kế toán,2019,2,Điểm học bạ THPT,62.0
+312,313,Tài chính ngân hàng,2019,2,Điểm học bạ THPT,62.0
+313,314,Luật kinh tế,2019,2,Điểm học bạ THPT,60.0
+314,315,Công nghệ kỹ thuật hóa học,2019,2,Điểm học bạ THPT,60.0
+315,316,Công nghệ vật liệu,2019,2,Điểm học bạ THPT,54.0
+316,317,Công nghệ kỹ thuật môi trường,2019,2,Điểm học bạ THPT,54.0
+317,318,Quản lý tài nguyên và môi trường,2019,2,Điểm học bạ THPT,54.0
+318,319,Công nghệ sinh học,2019,2,Điểm học bạ THPT,60.0
+319,320,Công nghệ thông tin,2019,2,Điểm học bạ THPT,62.0
+320,321,An toàn thông tin,2019,2,Điểm học bạ THPT,54.0
+321,322,"Công nghệ dệt, may",2019,2,Điểm học bạ THPT,58.0
+322,323,Công nghệ chế tạo máy,2019,2,Điểm học bạ THPT,54.0
+323,324,Công nghệ kỹ thuật cơ điện tử,2019,2,Điểm học bạ THPT,54.0
+324,325,Công nghệ kỹ thuật điện - điện tử,2019,2,Điểm học bạ THPT,58.0
+325,326,Công nghệ kỹ thuật điều khiển và tự động hóa,2019,2,Điểm học bạ THPT,54.0
+326,327,Khoa học dinh dưỡng và ẩm thực,2019,2,Điểm học bạ THPT,58.0
+327,328,Khoa học chế biến món ăn,2019,2,Điểm học bạ THPT,58.0
+328,329,Quản trị dịch vụ du lịch và lữ hành,2019,2,Điểm học bạ THPT,60.0
+329,330,Quản trị nhà hàng và dịch vụ ăn uống,2019,2,Điểm học bạ THPT,62.0
+330,331,Ngôn ngữ Anh,2019,2,Điểm học bạ THPT,64.0
+331,332,Công nghệ thực phẩm,2020,2,Điểm học bạ THPT,23.0
+332,333,Đảm bảo chất lượng & ATTP,2020,2,Điểm học bạ THPT,21.0
+333,334,Công nghệ chế biến thủy sản,2020,2,Điểm học bạ THPT,18.0
+334,335,Khoa học thủy sản,2020,2,Điểm học bạ THPT,18.0
+335,336,Quản trị kinh doanh,2020,2,Điểm học bạ THPT,21.0
+336,337,Kinh doanh quốc tế,2020,2,Điểm học bạ THPT,21.0
+337,338,Kế toán,2020,2,Điểm học bạ THPT,21.0
+338,339,Tài chính ngân hàng,2020,2,Điểm học bạ THPT,21.0
+339,340,Luật kinh tế,2020,2,Điểm học bạ THPT,21.0
+340,341,Công nghệ kỹ thuật hóa học,2020,2,Điểm học bạ THPT,19.0
+341,342,Công nghệ vật liệu,2020,2,Điểm học bạ THPT,18.0
+342,343,Công nghệ kỹ thuật môi trường,2020,2,Điểm học bạ THPT,18.0
+343,344,Quản lý tài nguyên và môi trường,2020,2,Điểm học bạ THPT,18.0
+344,345,Công nghệ sinh học,2020,2,Điểm học bạ THPT,20.0
+345,346,Công nghệ thông tin,2020,2,Điểm học bạ THPT,21.0
+346,347,An toàn thông tin,2020,2,Điểm học bạ THPT,19.0
+347,348,"Công nghệ dệt, may",2020,2,Điểm học bạ THPT,19.0
+348,349,Công nghệ chế tạo máy,2020,2,Điểm học bạ THPT,19.0
+349,350,Công nghệ kỹ thuật cơ điện tử,2020,2,Điểm học bạ THPT,19.0
+350,351,Công nghệ kỹ thuật điện - điện tử,2020,2,Điểm học bạ THPT,19.0
+351,352,Công nghệ kỹ thuật điều khiển và tự động hóa,2020,2,Điểm học bạ THPT,19.0
+352,353,Khoa học dinh dưỡng và ẩm thực,2020,2,Điểm học bạ THPT,20.0
+353,354,Khoa học chế biến món ăn,2020,2,Điểm học bạ THPT,20.0
+354,355,Quản trị dịch vụ du lịch và lữ hành,2020,2,Điểm học bạ THPT,21.5
+355,356,Quản trị nhà hàng và dịch vụ ăn uống,2020,2,Điểm học bạ THPT,21.5
+356,357,Quản trị khách sạn,2020,2,Điểm học bạ THPT,20.0
+357,358,Ngôn ngữ Anh,2020,2,Điểm học bạ THPT,21.5
+358,359,Ngôn ngữ Trung Quốc,2020,2,Điểm học bạ THPT,20.0
+359,360,Công nghệ thực phẩm,2021,2,Điểm học bạ cả năm lớp 12,25.25
+360,361,Đảm bảo chất lượng & ATTP,2021,2,Điểm học bạ cả năm lớp 12,22.0
+361,362,Công nghệ chế biến thủy sản,2021,2,Điểm học bạ cả năm lớp 12,18.0
+362,363,Khoa học thủy sản,2021,2,Điểm học bạ cả năm lớp 12,18.0
+363,364,Quản trị kinh doanh thực phẩm,2021,2,Điểm học bạ cả năm lớp 12,20.0
+364,365,Quản trị kinh doanh,2021,2,Điểm học bạ cả năm lớp 12,24.5
+365,366,Kinh doanh quốc tế,2021,2,Điểm học bạ cả năm lớp 12,23.5
+366,367,Marketing,2021,2,Điểm học bạ cả năm lớp 12,24.75
+367,368,Kế toán,2021,2,Điểm học bạ cả năm lớp 12,22.75
+368,369,Tài chính ngân hàng,2021,2,Điểm học bạ cả năm lớp 12,22.75
+369,370,Luật kinh tế,2021,2,Điểm học bạ cả năm lớp 12,21.5
+370,371,Công nghệ kỹ thuật hóa học,2021,2,Điểm học bạ cả năm lớp 12,19.0
+371,372,Kỹ thuật hóa phân tích,2021,2,Điểm học bạ cả năm lớp 12,18.0
+372,373,Công nghệ vật liệu,2021,2,Điểm học bạ cả năm lớp 12,18.0
+373,374,Công nghệ kỹ thuật môi trường,2021,2,Điểm học bạ cả năm lớp 12,18.0
+374,375,Quản lý tài nguyên và môi trường,2021,2,Điểm học bạ cả năm lớp 12,18.0
+375,376,Công nghệ sinh học,2021,2,Điểm học bạ cả năm lớp 12,20.0
+376,377,Công nghệ thông tin,2021,2,Điểm học bạ cả năm lớp 12,22.5
+377,378,An toàn thông tin,2021,2,Điểm học bạ cả năm lớp 12,19.0
+378,379,Kinh doanh thời trang và Dệt may,2021,2,Điểm học bạ cả năm lớp 12,18.0
+379,380,"Công nghệ dệt, may",2021,2,Điểm học bạ cả năm lớp 12,19.0
+380,381,Công nghệ chế tạo máy,2021,2,Điểm học bạ cả năm lớp 12,19.0
+381,382,Công nghệ kỹ thuật cơ điện tử,2021,2,Điểm học bạ cả năm lớp 12,19.0
+382,383,Kỹ thuật Nhiệt,2021,2,Điểm học bạ cả năm lớp 12,18.0
+383,384,Công nghệ kỹ thuật điện - điện tử,2021,2,Điểm học bạ cả năm lớp 12,19.0
+384,385,Công nghệ kỹ thuật điều khiển và tự động hóa,2021,2,Điểm học bạ cả năm lớp 12,19.0
+385,386,Quản lý năng lượng,2021,2,Điểm học bạ cả năm lớp 12,18.0
+386,387,Khoa học dinh dưỡng và ẩm thực,2021,2,Điểm học bạ cả năm lớp 12,20.5
+387,388,Khoa học chế biến món ăn,2021,2,Điểm học bạ cả năm lớp 12,20.5
+388,389,Quản trị dịch vụ du lịch và lữ hành,2021,2,Điểm học bạ cả năm lớp 12,22.0
+389,390,Quản trị nhà hàng và dịch vụ ăn uống,2021,2,Điểm học bạ cả năm lớp 12,23.75
+390,391,Quản trị khách sạn,2021,2,Điểm học bạ cả năm lớp 12,22.5
+391,392,Ngôn ngữ Anh,2021,2,Điểm học bạ cả năm lớp 12,23.5
+392,393,Ngôn ngữ Trung Quốc,2021,2,Điểm học bạ cả năm lớp 12,23.5
+393,394,Công nghệ thực phẩm,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+394,395,Đảm bảo chất lượng & ATTP,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+395,396,Công nghệ chế biến thủy sản,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+396,397,Khoa học thủy sản,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+397,398,Quản trị kinh doanh thực phẩm,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+398,399,Quản trị kinh doanh,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.5
+399,400,Kinh doanh quốc tế,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+400,401,Marketing,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+401,402,Kế toán,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.5
+402,403,Tài chính ngân hàng,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.5
+403,404,Luật kinh tế,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.5
+404,405,Công nghệ kỹ thuật hóa học,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",19.0
+405,406,Kỹ thuật hóa phân tích,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+406,407,Công nghệ vật liệu,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+407,408,Công nghệ kỹ thuật môi trường,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+408,409,Quản lý tài nguyên và môi trường,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+409,410,Công nghệ sinh học,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+410,411,Công nghệ thông tin,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.5
+411,412,An toàn thông tin,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",19.0
+412,413,Kinh doanh thời trang và Dệt may,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+413,414,"Công nghệ dệt, may",2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",19.0
+414,415,Công nghệ chế tạo máy,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",19.0
+415,416,Công nghệ kỹ thuật cơ điện tử,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",19.0
+416,417,Kỹ thuật Nhiệt,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+417,418,Công nghệ kỹ thuật điện - điện tử,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",19.0
+418,419,Công nghệ kỹ thuật điều khiển và tự động hóa,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",19.0
+419,420,Quản lý năng lượng,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",18.0
+420,421,Khoa học dinh dưỡng và ẩm thực,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.5
+421,422,Khoa học chế biến món ăn,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.5
+422,423,Quản trị dịch vụ du lịch và lữ hành,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+423,424,Quản trị nhà hàng và dịch vụ ăn uống,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+424,425,Quản trị khách sạn,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.0
+425,426,Ngôn ngữ Anh,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+426,427,Ngôn ngữ Trung Quốc,2021,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+427,428,Công nghệ thực phẩm,2022,2,Điểm học bạ cả năm lớp 12,27.5
+428,429,Đảm bảo chất lượng & ATTP,2022,2,Điểm học bạ cả năm lớp 12,24.5
+429,430,Công nghệ chế biến thủy sản,2022,2,Điểm học bạ cả năm lớp 12,20.0
+430,431,Quản trị kinh doanh thực phẩm,2022,2,Điểm học bạ cả năm lớp 12,22.75
+431,432,Quản trị kinh doanh,2022,2,Điểm học bạ cả năm lớp 12,26.75
+432,433,Kinh doanh quốc tế,2022,2,Điểm học bạ cả năm lớp 12,26.5
+433,434,Marketing,2022,2,Điểm học bạ cả năm lớp 12,27.5
+434,435,Kế toán,2022,2,Điểm học bạ cả năm lớp 12,26.0
+435,436,Tài chính ngân hàng,2022,2,Điểm học bạ cả năm lớp 12,26.5
+436,437,Luật kinh tế,2022,2,Điểm học bạ cả năm lớp 12,25.25
+437,438,Công nghệ kỹ thuật hóa học,2022,2,Điểm học bạ cả năm lớp 12,23.0
+438,439,Công nghệ vật liệu,2022,2,Điểm học bạ cả năm lớp 12,20.0
+439,440,Công nghệ kỹ thuật môi trường,2022,2,Điểm học bạ cả năm lớp 12,21.0
+440,441,Quản lý tài nguyên và môi trường,2022,2,Điểm học bạ cả năm lớp 12,21.0
+441,442,Công nghệ sinh học,2022,2,Điểm học bạ cả năm lớp 12,22.0
+442,443,Công nghệ thông tin,2022,2,Điểm học bạ cả năm lớp 12,26.5
+443,444,An toàn thông tin,2022,2,Điểm học bạ cả năm lớp 12,23.0
+444,445,Kinh doanh thời trang và Dệt may,2022,2,Điểm học bạ cả năm lớp 12,21.0
+445,446,"Công nghệ dệt, may",2022,2,Điểm học bạ cả năm lớp 12,21.0
+446,447,Công nghệ chế tạo máy,2022,2,Điểm học bạ cả năm lớp 12,22.5
+447,448,Công nghệ kỹ thuật cơ điện tử,2022,2,Điểm học bạ cả năm lớp 12,23.0
+448,449,Kỹ thuật Nhiệt,2022,2,Điểm học bạ cả năm lớp 12,20.0
+449,450,Công nghệ kỹ thuật điện - điện tử,2022,2,Điểm học bạ cả năm lớp 12,23.5
+450,451,Công nghệ kỹ thuật điều khiển và tự động hóa,2022,2,Điểm học bạ cả năm lớp 12,23.5
+451,452,Quản lý năng lượng,2022,2,Điểm học bạ cả năm lớp 12,20.0
+452,453,Khoa học dinh dưỡng và ẩm thực,2022,2,Điểm học bạ cả năm lớp 12,22.5
+453,454,Khoa học chế biến món ăn,2022,2,Điểm học bạ cả năm lớp 12,22.5
+454,455,Quản trị dịch vụ du lịch và lữ hành,2022,2,Điểm học bạ cả năm lớp 12,25.0
+455,456,Quản trị nhà hàng và dịch vụ ăn uống,2022,2,Điểm học bạ cả năm lớp 12,24.5
+456,457,Quản trị khách sạn,2022,2,Điểm học bạ cả năm lớp 12,25.0
+457,458,Ngôn ngữ Anh,2022,2,Điểm học bạ cả năm lớp 12,25.75
+458,459,Ngôn ngữ Trung Quốc,2022,2,Điểm học bạ cả năm lớp 12,25.75
+459,460,Công nghệ thực phẩm,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",27.0
+460,461,Đảm bảo chất lượng & ATTP,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+461,462,Công nghệ chế biến thủy sản,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+462,463,Quản trị kinh doanh thực phẩm,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.0
+463,464,Quản trị kinh doanh,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",26.0
+464,465,Kinh doanh quốc tế,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",26.0
+465,466,Marketing,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",26.5
+466,467,Kế toán,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",25.5
+467,468,Tài chính ngân hàng,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",25.5
+468,469,Luật kinh tế,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.5
+469,470,Công nghệ kỹ thuật hóa học,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.25
+470,471,Công nghệ vật liệu,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+471,472,Công nghệ kỹ thuật môi trường,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+472,473,Quản lý tài nguyên và môi trường,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.0
+473,474,Công nghệ sinh học,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+474,475,Công nghệ thông tin,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",25.0
+475,476,An toàn thông tin,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.25
+476,477,Kinh doanh thời trang và Dệt may,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+477,478,"Công nghệ dệt, may",2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+478,479,Công nghệ chế tạo máy,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+479,480,Công nghệ kỹ thuật cơ điện tử,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.25
+480,481,Kỹ thuật Nhiệt,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+481,482,Công nghệ kỹ thuật điện - điện tử,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.25
+482,483,Công nghệ kỹ thuật điều khiển và tự động hóa,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.5
+483,484,Quản lý năng lượng,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+484,485,Khoa học dinh dưỡng và ẩm thực,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.25
+485,486,Khoa học chế biến món ăn,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.25
+486,487,Quản trị dịch vụ du lịch và lữ hành,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+487,488,Quản trị nhà hàng và dịch vụ ăn uống,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+488,489,Quản trị khách sạn,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",25.0
+489,490,Ngôn ngữ Anh,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",25.5
+490,491,Ngôn ngữ Trung Quốc,2022,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",25.5
+491,492,Công nghệ thực phẩm,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+492,493,Đảm bảo chất lượng & ATTP,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.75
+493,494,Công nghệ chế biến thủy sản,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+494,495,Quản trị kinh doanh thực phẩm,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.0
+495,496,Quản trị kinh doanh,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+496,497,Kinh doanh quốc tế,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+497,498,Marketing,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+498,499,Thương mại điện tử,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.0
+499,500,Kế toán,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.0
+500,501,Tài chính ngân hàng,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.0
+501,502,Công nghệ tài chính,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+502,503,Công nghệ kỹ thuật hóa học,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+503,504,Công nghệ kỹ thuật môi trường,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+504,505,Quản lý tài nguyên và môi trường,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+505,506,Công nghệ sinh học,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+506,507,Công nghệ thông tin,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+507,508,An toàn thông tin,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.25
+508,509,Khoa học dữ liệu,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+509,510,"Công nghệ dệt, may",2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+510,511,Công nghệ chế tạo máy,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+511,512,Công nghệ kỹ thuật cơ điện tử,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+512,513,Kỹ thuật Nhiệt,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+513,514,Công nghệ kỹ thuật điện - điện tử,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+514,515,Công nghệ kỹ thuật điều khiển và tự động hóa,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+515,516,Khoa học dinh dưỡng và ẩm thực,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.5
+516,517,Khoa học chế biến món ăn,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.5
+517,518,Quản trị dịch vụ du lịch và lữ hành,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+518,519,Quản trị nhà hàng và dịch vụ ăn uống,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+519,520,Quản trị khách sạn,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+520,521,Ngôn ngữ Anh,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+521,522,Ngôn ngữ Trung Quốc,2023,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+522,523,Công nghệ thực phẩm,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.5
+523,524,Đảm bảo chất lượng & ATTP,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+524,525,Công nghệ chế biến thủy sản,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+525,526,Quản trị kinh doanh thực phẩm,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.0
+526,527,Quản trị kinh doanh,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+527,528,Kinh doanh quốc tế,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+528,529,Marketing,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",25.0
+529,530,Thương mại điện tử,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+530,531,Logistics và quản lý chuỗi cung ứng,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.0
+531,532,Kế toán,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+532,533,Tài chính ngân hàng,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.5
+533,534,Công nghệ tài chính,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+534,535,Luật kinh tế,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.5
+535,536,Công nghệ kỹ thuật hóa học,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+536,537,Công nghệ kỹ thuật môi trường,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+537,538,Quản lý tài nguyên và môi trường,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+538,539,Công nghệ sinh học,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+539,540,Công nghệ thông tin,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",23.75
+540,541,An toàn thông tin,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+541,542,Khoa học dữ liệu,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+542,543,Kinh doanh thời trang và Dệt may,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+543,544,"Công nghệ dệt, may",2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+544,545,Công nghệ chế tạo máy,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+545,546,Công nghệ kỹ thuật cơ điện tử,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+546,547,Kỹ thuật Nhiệt,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.0
+547,548,Công nghệ kỹ thuật điện - điện tử,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.0
+548,549,Công nghệ kỹ thuật điều khiển và tự động hóa,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",21.0
+549,550,Khoa học dinh dưỡng và ẩm thực,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.5
+550,551,Khoa học chế biến món ăn,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",20.5
+551,552,Quản trị dịch vụ du lịch và lữ hành,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+552,553,Quản trị nhà hàng và dịch vụ ăn uống,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+553,554,Quản trị khách sạn,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",22.0
+554,555,Ngôn ngữ Anh,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.25
+555,556,Ngôn ngữ Trung Quốc,2024,2,"Điểm học bạ lớp 10, 11 và HK1 lớp 12",24.5
+556,557,Công nghệ thực phẩm,2020,3,Đánh giá năng lực,650.0
+557,558,Đảm bảo chất lượng & ATTP,2020,3,Đánh giá năng lực,650.0
+558,559,Công nghệ chế biến thủy sản,2020,3,Đánh giá năng lực,650.0
+559,560,Khoa học thủy sản,2020,3,Đánh giá năng lực,650.0
+560,561,Quản trị kinh doanh,2020,3,Đánh giá năng lực,650.0
+561,562,Kinh doanh quốc tế,2020,3,Đánh giá năng lực,650.0
+562,563,Kế toán,2020,3,Đánh giá năng lực,650.0
+563,564,Tài chính ngân hàng,2020,3,Đánh giá năng lực,650.0
+564,565,Luật kinh tế,2020,3,Đánh giá năng lực,650.0
+565,566,Công nghệ kỹ thuật hóa học,2020,3,Đánh giá năng lực,650.0
+566,567,Công nghệ vật liệu,2020,3,Đánh giá năng lực,650.0
+567,568,Công nghệ kỹ thuật môi trường,2020,3,Đánh giá năng lực,650.0
+568,569,Quản lý tài nguyên và môi trường,2020,3,Đánh giá năng lực,650.0
+569,570,Công nghệ sinh học,2020,3,Đánh giá năng lực,650.0
+570,571,Công nghệ thông tin,2020,3,Đánh giá năng lực,650.0
+571,572,An toàn thông tin,2020,3,Đánh giá năng lực,650.0
+572,573,"Công nghệ dệt, may",2020,3,Đánh giá năng lực,650.0
+573,574,Công nghệ chế tạo máy,2020,3,Đánh giá năng lực,650.0
+574,575,Công nghệ kỹ thuật cơ điện tử,2020,3,Đánh giá năng lực,650.0
+575,576,Công nghệ kỹ thuật điện - điện tử,2020,3,Đánh giá năng lực,650.0
+576,577,Công nghệ kỹ thuật điều khiển và tự động hóa,2020,3,Đánh giá năng lực,650.0
+577,578,Khoa học dinh dưỡng và ẩm thực,2020,3,Đánh giá năng lực,650.0
+578,579,Khoa học chế biến món ăn,2020,3,Đánh giá năng lực,650.0
+579,580,Quản trị dịch vụ du lịch và lữ hành,2020,3,Đánh giá năng lực,650.0
+580,581,Quản trị nhà hàng và dịch vụ ăn uống,2020,3,Đánh giá năng lực,650.0
+581,582,Quản trị khách sạn,2020,3,Đánh giá năng lực,650.0
+582,583,Ngôn ngữ Anh,2020,3,Đánh giá năng lực,650.0
+583,584,Ngôn ngữ Trung Quốc,2020,3,Đánh giá năng lực,650.0
+584,585,Công nghệ thực phẩm,2021,3,Đánh giá năng lực,700.0
+585,586,Đảm bảo chất lượng & ATTP,2021,3,Đánh giá năng lực,650.0
+586,587,Công nghệ chế biến thủy sản,2021,3,Đánh giá năng lực,650.0
+587,588,Khoa học thủy sản,2021,3,Đánh giá năng lực,650.0
+588,589,Quản trị kinh doanh thực phẩm,2021,3,Đánh giá năng lực,650.0
+589,590,Quản trị kinh doanh,2021,3,Đánh giá năng lực,650.0
+590,591,Kinh doanh quốc tế,2021,3,Đánh giá năng lực,650.0
+591,592,Marketing,2021,3,Đánh giá năng lực,650.0
+592,593,Kế toán,2021,3,Đánh giá năng lực,650.0
+593,594,Tài chính ngân hàng,2021,3,Đánh giá năng lực,650.0
+594,595,Luật kinh tế,2021,3,Đánh giá năng lực,650.0
+595,596,Công nghệ kỹ thuật hóa học,2021,3,Đánh giá năng lực,650.0
+596,597,Kỹ thuật hóa phân tích,2021,3,Đánh giá năng lực,650.0
+597,598,Công nghệ vật liệu,2021,3,Đánh giá năng lực,650.0
+598,599,Công nghệ kỹ thuật môi trường,2021,3,Đánh giá năng lực,650.0
+599,600,Quản lý tài nguyên và môi trường,2021,3,Đánh giá năng lực,650.0
+600,601,Công nghệ sinh học,2021,3,Đánh giá năng lực,650.0
+601,602,Công nghệ thông tin,2021,3,Đánh giá năng lực,650.0
+602,603,An toàn thông tin,2021,3,Đánh giá năng lực,650.0
+603,604,Kinh doanh thời trang và Dệt may,2021,3,Đánh giá năng lực,650.0
+604,605,"Công nghệ dệt, may",2021,3,Đánh giá năng lực,650.0
+605,606,Công nghệ chế tạo máy,2021,3,Đánh giá năng lực,650.0
+606,607,Công nghệ kỹ thuật cơ điện tử,2021,3,Đánh giá năng lực,650.0
+607,608,Kỹ thuật Nhiệt,2021,3,Đánh giá năng lực,650.0
+608,609,Công nghệ kỹ thuật điện - điện tử,2021,3,Đánh giá năng lực,650.0
+609,610,Công nghệ kỹ thuật điều khiển và tự động hóa,2021,3,Đánh giá năng lực,650.0
+610,611,Quản lý năng lượng,2021,3,Đánh giá năng lực,650.0
+611,612,Khoa học dinh dưỡng và ẩm thực,2021,3,Đánh giá năng lực,650.0
+612,613,Khoa học chế biến món ăn,2021,3,Đánh giá năng lực,650.0
+613,614,Quản trị dịch vụ du lịch và lữ hành,2021,3,Đánh giá năng lực,650.0
+614,615,Quản trị nhà hàng và dịch vụ ăn uống,2021,3,Đánh giá năng lực,650.0
+615,616,Quản trị khách sạn,2021,3,Đánh giá năng lực,650.0
+616,617,Ngôn ngữ Anh,2021,3,Đánh giá năng lực,650.0
+617,618,Ngôn ngữ Trung Quốc,2021,3,Đánh giá năng lực,650.0
+618,619,Công nghệ thực phẩm,2022,3,Đánh giá năng lực,750.0
+619,620,Đảm bảo chất lượng & ATTP,2022,3,Đánh giá năng lực,600.0
+620,621,Công nghệ chế biến thủy sản,2022,3,Đánh giá năng lực,600.0
+621,622,Khoa học thủy sản,2022,3,Đánh giá năng lực,600.0
+622,623,Quản trị kinh doanh thực phẩm,2022,3,Đánh giá năng lực,600.0
+623,624,Quản trị kinh doanh,2022,3,Đánh giá năng lực,700.0
+624,625,Kinh doanh quốc tế,2022,3,Đánh giá năng lực,730.0
+625,626,Marketing,2022,3,Đánh giá năng lực,730.0
+626,627,Kế toán,2022,3,Đánh giá năng lực,680.0
+627,628,Tài chính ngân hàng,2022,3,Đánh giá năng lực,680.0
+628,629,Luật kinh tế,2022,3,Đánh giá năng lực,600.0
+629,630,Công nghệ kỹ thuật hóa học,2022,3,Đánh giá năng lực,600.0
+630,631,Kỹ thuật hóa phân tích,2022,3,Đánh giá năng lực,600.0
+631,632,Công nghệ vật liệu,2022,3,Đánh giá năng lực,600.0
+632,633,Công nghệ kỹ thuật môi trường,2022,3,Đánh giá năng lực,600.0
+633,634,Quản lý tài nguyên và môi trường,2022,3,Đánh giá năng lực,600.0
+634,635,Công nghệ sinh học,2022,3,Đánh giá năng lực,600.0
+635,636,Công nghệ thông tin,2022,3,Đánh giá năng lực,650.0
+636,637,An toàn thông tin,2022,3,Đánh giá năng lực,600.0
+637,638,Kinh doanh thời trang và Dệt may,2022,3,Đánh giá năng lực,600.0
+638,639,"Công nghệ dệt, may",2022,3,Đánh giá năng lực,600.0
+639,640,Công nghệ chế tạo máy,2022,3,Đánh giá năng lực,600.0
+640,641,Công nghệ kỹ thuật cơ điện tử,2022,3,Đánh giá năng lực,600.0
+641,642,Kỹ thuật Nhiệt,2022,3,Đánh giá năng lực,600.0
+642,643,Công nghệ kỹ thuật điện - điện tử,2022,3,Đánh giá năng lực,600.0
+643,644,Công nghệ kỹ thuật điều khiển và tự động hóa,2022,3,Đánh giá năng lực,600.0
+644,645,Quản lý năng lượng,2022,3,Đánh giá năng lực,600.0
+645,646,Khoa học dinh dưỡng và ẩm thực,2022,3,Đánh giá năng lực,600.0
+646,647,Khoa học chế biến món ăn,2022,3,Đánh giá năng lực,600.0
+647,648,Quản trị dịch vụ du lịch và lữ hành,2022,3,Đánh giá năng lực,600.0
+648,649,Quản trị nhà hàng và dịch vụ ăn uống,2022,3,Đánh giá năng lực,600.0
+649,650,Quản trị khách sạn,2022,3,Đánh giá năng lực,600.0
+650,651,Ngôn ngữ Anh,2022,3,Đánh giá năng lực,700.0
+651,652,Ngôn ngữ Trung Quốc,2022,3,Đánh giá năng lực,650.0
+652,653,Công nghệ thực phẩm,2023,3,Đánh giá năng lực,700.0
+653,654,Đảm bảo chất lượng & ATTP,2023,3,Đánh giá năng lực,600.0
+654,655,Công nghệ chế biến thủy sản,2023,3,Đánh giá năng lực,600.0
+655,656,Quản trị kinh doanh thực phẩm,2023,3,Đánh giá năng lực,600.0
+656,657,Quản trị kinh doanh,2023,3,Đánh giá năng lực,700.0
+657,658,Kinh doanh quốc tế,2023,3,Đánh giá năng lực,650.0
+658,659,Marketing,2023,3,Đánh giá năng lực,700.0
+659,660,Thương mại điện tử,2023,3,Đánh giá năng lực,600.0
+660,661,Kế toán,2023,3,Đánh giá năng lực,650.0
+661,662,Tài chính ngân hàng,2023,3,Đánh giá năng lực,600.0
+662,663,Công nghệ tài chính,2023,3,Đánh giá năng lực,600.0
+663,664,Luật kinh tế,2023,3,Đánh giá năng lực,600.0
+664,665,Công nghệ kỹ thuật hóa học,2023,3,Đánh giá năng lực,600.0
+665,666,Công nghệ kỹ thuật môi trường,2023,3,Đánh giá năng lực,600.0
+666,667,Quản lý tài nguyên và môi trường,2023,3,Đánh giá năng lực,600.0
+667,668,Công nghệ sinh học,2023,3,Đánh giá năng lực,600.0
+668,669,Công nghệ thông tin,2023,3,Đánh giá năng lực,700.0
+669,670,An toàn thông tin,2023,3,Đánh giá năng lực,600.0
+670,671,Khoa học dữ liệu,2023,3,Đánh giá năng lực,600.0
+671,672,Kinh doanh thời trang và Dệt may,2023,3,Đánh giá năng lực,600.0
+672,673,"Công nghệ dệt, may",2023,3,Đánh giá năng lực,600.0
+673,674,Công nghệ chế tạo máy,2023,3,Đánh giá năng lực,600.0
+674,675,Công nghệ kỹ thuật cơ điện tử,2023,3,Đánh giá năng lực,600.0
+675,676,Kỹ thuật Nhiệt,2023,3,Đánh giá năng lực,600.0
+676,677,Công nghệ kỹ thuật điện - điện tử,2023,3,Đánh giá năng lực,600.0
+677,678,Công nghệ kỹ thuật điều khiển và tự động hóa,2023,3,Đánh giá năng lực,600.0
+678,679,Khoa học dinh dưỡng và ẩm thực,2023,3,Đánh giá năng lực,600.0
+679,680,Khoa học chế biến món ăn,2023,3,Đánh giá năng lực,600.0
+680,681,Quản trị dịch vụ du lịch và lữ hành,2023,3,Đánh giá năng lực,600.0
+681,682,Quản trị nhà hàng và dịch vụ ăn uống,2023,3,Đánh giá năng lực,600.0
+682,683,Quản trị khách sạn,2023,3,Đánh giá năng lực,600.0
+683,684,Ngôn ngữ Anh,2023,3,Đánh giá năng lực,650.0
+684,685,Ngôn ngữ Trung Quốc,2023,3,Đánh giá năng lực,650.0
+685,686,Công nghệ thực phẩm,2024,3,Đánh giá năng lực,700.0
+686,687,Đảm bảo chất lượng & ATTP,2024,3,Đánh giá năng lực,600.0
+687,688,Công nghệ chế biến thủy sản,2024,3,Đánh giá năng lực,600.0
+688,689,Quản trị kinh doanh thực phẩm,2024,3,Đánh giá năng lực,600.0
+689,690,Quản trị kinh doanh,2024,3,Đánh giá năng lực,700.0
+690,691,Kinh doanh quốc tế,2024,3,Đánh giá năng lực,750.0
+691,692,Marketing,2024,3,Đánh giá năng lực,750.0
+692,693,Thương mại điện tử,2024,3,Đánh giá năng lực,750.0
+693,694,Logistics và quản lý chuỗi cung ứng,2024,3,Đánh giá năng lực,750.0
+694,695,Kế toán,2024,3,Đánh giá năng lực,650.0
+695,696,Tài chính ngân hàng,2024,3,Đánh giá năng lực,700.0
+696,697,Công nghệ tài chính,2024,3,Đánh giá năng lực,600.0
+697,698,Luật kinh tế,2024,3,Đánh giá năng lực,650.0
+698,699,Công nghệ kỹ thuật hóa học,2024,3,Đánh giá năng lực,600.0
+699,700,Công nghệ kỹ thuật môi trường,2024,3,Đánh giá năng lực,600.0
+700,701,Quản lý tài nguyên và môi trường,2024,3,Đánh giá năng lực,600.0
+701,702,Công nghệ sinh học,2024,3,Đánh giá năng lực,600.0
+702,703,Công nghệ thông tin,2024,3,Đánh giá năng lực,700.0
+703,704,An toàn thông tin,2024,3,Đánh giá năng lực,600.0
+704,705,Khoa học dữ liệu,2024,3,Đánh giá năng lực,600.0
+705,706,Kinh doanh thời trang và Dệt may,2024,3,Đánh giá năng lực,600.0
+706,707,"Công nghệ dệt, may",2024,3,Đánh giá năng lực,600.0
+707,708,Công nghệ chế tạo máy,2024,3,Đánh giá năng lực,600.0
+708,709,Công nghệ kỹ thuật cơ điện tử,2024,3,Đánh giá năng lực,600.0
+709,710,Kỹ thuật Nhiệt,2024,3,Đánh giá năng lực,600.0
+710,711,Công nghệ kỹ thuật điện - điện tử,2024,3,Đánh giá năng lực,600.0
+711,712,Công nghệ kỹ thuật điều khiển và tự động hóa,2024,3,Đánh giá năng lực,600.0
+712,713,Khoa học dinh dưỡng và ẩm thực,2024,3,Đánh giá năng lực,600.0
+713,714,Khoa học chế biến món ăn,2024,3,Đánh giá năng lực,600.0
+714,715,Quản trị dịch vụ du lịch và lữ hành,2024,3,Đánh giá năng lực,600.0
+715,716,Quản trị nhà hàng và dịch vụ ăn uống,2024,3,Đánh giá năng lực,600.0
+716,717,Quản trị khách sạn,2024,3,Đánh giá năng lực,600.0
+717,718,Ngôn ngữ Anh,2024,3,Đánh giá năng lực,700.0
+718,719,Ngôn ngữ Trung Quốc,2024,3,Đánh giá năng lực,650.0

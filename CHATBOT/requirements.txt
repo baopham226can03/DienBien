@@ -1,0 +1,27 @@
+# Core dependencies
+fastapi==0.115.8
+uvicorn==0.34.0
+pydantic==2.10.6
+python-dotenv==1.1.0
+python-multipart==0.0.20
+
+# Model và AI dependencies - khai báo rõ phiên bản cụ thể
+langchain==0.3.24
+langchain-openai==0.3.12
+langchain-google-genai==2.1.3
+langgraph==0.3.30
+openai==1.68.2
+
+# Vector store
+qdrant-client==1.13.3
+
+# Embedding models và xử lý ngôn ngữ 
+sentence-transformers==3.3.1
+huggingface-hub==0.28.1
+pyvi==0.1.1
+
+# Development tools
+IPython==8.12.3
+langchain-community==0.3.23
+pandas==2.2.3
+cohere==5.15.0

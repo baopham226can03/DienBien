@@ -1,0 +1,110 @@
+2025-05-14 14:20:08,883 - INFO - main - Initializing Chatbot Agent...
+2025-05-14 14:20:09,885 - INFO - httpx - HTTP Request: GET https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-14 14:20:09,900 - INFO - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-05-14 14:20:09,900 - INFO - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: dangvantuan/vietnamese-document-embedding
+2025-05-14 14:21:49,392 - INFO - main - Session ID request: None
+2025-05-14 14:21:49,393 - INFO - main - Session ID After request: f4f97d13-4ed1-4980-8022-8b01e76afc14
+2025-05-14 14:21:49,393 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:21:50,563 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:21:52,195 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/search "HTTP/1.1 200 OK"
+2025-05-14 14:21:55,695 - INFO - httpx - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-05-14 14:21:59,898 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:22:09,598 - INFO - main - Session ID request: None
+2025-05-14 14:22:09,598 - INFO - main - Session ID After request: 3e43d48e-67c0-4781-8c43-5a002a3d280a
+2025-05-14 14:22:09,598 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:22:10,373 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:22:11,930 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/search "HTTP/1.1 200 OK"
+2025-05-14 14:22:15,575 - INFO - httpx - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-05-14 14:22:19,217 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:22:45,514 - INFO - main - Session ID request: None
+2025-05-14 14:22:45,514 - INFO - main - Session ID After request: 9c31602d-112f-4bc5-8f86-e7cfbff15480
+2025-05-14 14:22:45,514 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:22:46,464 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:23:53,254 - INFO - main - Session ID request: 9c31602d-112f-4bc5-8f86-e7cfbff15480
+2025-05-14 14:23:53,254 - INFO - main - Session ID After request: 9c31602d-112f-4bc5-8f86-e7cfbff15480
+2025-05-14 14:23:53,255 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:23:54,614 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:23:56,629 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/search "HTTP/1.1 200 OK"
+2025-05-14 14:24:00,261 - INFO - httpx - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-05-14 14:24:04,013 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:25:01,549 - INFO - main - Received question: hi
+2025-05-14 14:25:01,557 - INFO - main - Session ID request: 9c31602d-112f-4bc5-8f86-e7cfbff15480
+2025-05-14 14:25:01,558 - INFO - main - Session ID After request: 9c31602d-112f-4bc5-8f86-e7cfbff15480
+2025-05-14 14:25:01,558 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:25:02,553 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:32:38,739 - INFO - main - Initializing Chatbot Agent...
+2025-05-14 14:32:39,764 - INFO - httpx - HTTP Request: GET https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-14 14:32:39,780 - INFO - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-05-14 14:32:39,780 - INFO - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: dangvantuan/vietnamese-document-embedding
+2025-05-14 14:33:55,229 - INFO - main - Session ID request: None
+2025-05-14 14:33:55,229 - INFO - main - Session ID After request: c70db6e0-7b53-4495-b377-f593f8843f13
+2025-05-14 14:33:55,230 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:33:56,962 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:33:58,713 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/search "HTTP/1.1 200 OK"
+2025-05-14 14:34:01,964 - INFO - httpx - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-05-14 14:34:06,429 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:34:49,812 - INFO - main - Session ID request: c70db6e0-7b53-4495-b377-f593f8843f13
+2025-05-14 14:34:49,813 - INFO - main - Session ID After request: c70db6e0-7b53-4495-b377-f593f8843f13
+2025-05-14 14:34:49,813 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:34:51,112 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:36:26,744 - INFO - main - Session ID request: None
+2025-05-14 14:36:26,744 - INFO - main - Session ID After request: 4c593d5e-822b-4a80-b018-2d07f706e950
+2025-05-14 14:36:26,744 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:36:28,319 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:36:29,885 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/search "HTTP/1.1 200 OK"
+2025-05-14 14:36:33,095 - INFO - httpx - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-05-14 14:36:39,388 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:43:56,074 - INFO - main - Initializing Chatbot Agent...
+2025-05-14 14:43:56,976 - INFO - httpx - HTTP Request: GET https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-14 14:43:56,991 - INFO - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-05-14 14:43:56,991 - INFO - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: dangvantuan/vietnamese-document-embedding
+2025-05-14 14:45:23,911 - INFO - main - Session ID request: None
+2025-05-14 14:45:23,911 - INFO - main - Session ID After request: a340f47f-2f10-4327-9259-ab4a1938e96e
+2025-05-14 14:45:23,911 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:45:25,579 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:45:39,112 - INFO - main - Session ID request: a340f47f-2f10-4327-9259-ab4a1938e96e
+2025-05-14 14:45:39,112 - INFO - main - Session ID After request: a340f47f-2f10-4327-9259-ab4a1938e96e
+2025-05-14 14:45:39,112 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:45:40,437 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:46:49,197 - INFO - main - Initializing Chatbot Agent...
+2025-05-14 14:46:50,186 - INFO - httpx - HTTP Request: GET https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-14 14:46:50,192 - INFO - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-05-14 14:46:50,192 - INFO - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: dangvantuan/vietnamese-document-embedding
+2025-05-14 14:47:05,040 - INFO - main - Session ID request: None
+2025-05-14 14:47:05,045 - INFO - main - Session ID After request: 8a175a62-95d9-4164-a43f-973c09903d1c
+2025-05-14 14:47:05,045 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:47:06,661 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:47:08,549 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/search "HTTP/1.1 200 OK"
+2025-05-14 14:47:11,845 - INFO - httpx - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-05-14 14:47:16,710 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 14:47:50,500 - INFO - main - Session ID request: 8a175a62-95d9-4164-a43f-973c09903d1c
+2025-05-14 14:47:50,500 - INFO - main - Session ID After request: 8a175a62-95d9-4164-a43f-973c09903d1c
+2025-05-14 14:47:50,500 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 14:47:51,985 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 15:03:34,052 - INFO - main - Initializing Chatbot Agent...
+2025-05-14 15:03:34,865 - INFO - httpx - HTTP Request: GET https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-14 15:03:34,882 - INFO - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-05-14 15:03:34,882 - INFO - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: dangvantuan/vietnamese-document-embedding
+2025-05-14 15:03:46,511 - INFO - main - Session ID request: e35b23cc-d66d-47f1-93ae-8651746dc0d9
+2025-05-14 15:03:46,511 - INFO - main - Session ID After request: e35b23cc-d66d-47f1-93ae-8651746dc0d9
+2025-05-14 15:03:46,511 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 15:03:56,127 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 15:03:58,010 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/search "HTTP/1.1 200 OK"
+2025-05-14 15:04:01,010 - INFO - httpx - HTTP Request: POST https://api.cohere.com/v1/rerank "HTTP/1.1 200 OK"
+2025-05-14 15:04:01,031 - INFO - openai._base_client - Retrying request to /chat/completions in 0.439433 seconds
+2025-05-14 15:04:03,593 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 15:04:05,038 - INFO - openai._base_client - Retrying request to /chat/completions in 0.448118 seconds
+2025-05-14 15:04:08,662 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 15:04:09,901 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/scroll "HTTP/1.1 200 OK"
+2025-05-14 15:04:10,244 - INFO - httpx - HTTP Request: POST https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333/collections/dienbien/points/scroll "HTTP/1.1 200 OK"
+2025-05-14 15:04:11,760 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 15:11:05,116 - INFO - main - Initializing Chatbot Agent...
+2025-05-14 15:11:05,923 - INFO - httpx - HTTP Request: GET https://d7aaaba7-730a-40ff-8d19-32ee73c6d8b1.us-east4-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-14 15:11:05,923 - INFO - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-05-14 15:11:05,923 - INFO - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: dangvantuan/vietnamese-document-embedding
+2025-05-14 15:11:47,543 - INFO - main - Session ID request: None
+2025-05-14 15:11:47,543 - INFO - main - Session ID After request: 4194a6af-568c-4ac8-9645-b06954bf7892
+2025-05-14 15:11:47,543 - INFO - main - Processing with ChatBotAgent...
+2025-05-14 15:11:49,330 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 15:11:51,518 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-14 15:11:52,800 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
