@@ -8,3 +8,5 @@ matplotlib
 tqdm
 absl-py
 comet_ml
+accelerate
+bitsandbytes
