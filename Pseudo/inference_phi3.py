@@ -7,7 +7,7 @@ import time
 
 # === CONFIG ===
 MODEL_NAME = "microsoft/phi-3-medium-4k-instruct"
-INPUT_FILE = "du_unlabeled_backup.csv"   # file chứa 1000 mẫu
+INPUT_FILE = "train_unlabeled.csv"   # file chứa 1000 mẫu
 # INPUT_FILE = "a.csv"   # file chứa 1000 mẫu
 OUTPUT_FILE = "du_pseudo_phi3.csv"
 MAX_NEW_TOKENS = 5     # sinh ngắn, chỉ cần số 0/1
@@ -19,17 +19,18 @@ DEBUG_MODE = False  # tắt debug để giảm logging
 # === PROMPT ===
 def build_prompt(text: str) -> str:
     return f"""<|system|>
-You are an expert fact-checker. Read the following news article carefully and make a balanced, fair judgment.
-Decide if the information in the article is mostly REAL (accurate and verifiable) or FAKE (false or misleading).
-Respond only with a single digit:
-1 = REAL 
-0 = FAKE 
-Do not explain or repeat the text. Avoid guessing; if uncertain, choose the option that seems more likely to be TRUE based on evidence in the text.
+Bạn là một chuyên gia kiểm chứng thông tin. Hãy đọc kỹ bài báo dưới đây và đưa ra đánh giá khách quan, cân bằng và công bằng.
+Xác định xem thông tin trong bài viết chủ yếu là THẬT (chính xác và có thể kiểm chứng) hay GIẢ (sai lệch hoặc gây hiểu lầm).
+Chỉ trả lời bằng một chữ số duy nhất:
+1 = THẬT 
+0 = GIẢ 
+Không giải thích, không lặp lại nội dung bài viết. Tránh phán đoán khi thiếu thông tin; nếu không chắc chắn, hãy chọn phương án có vẻ đúng sự thật hơn dựa trên bằng chứng trong bài.
 <|end|>
 <|user|>
 {text}
 <|end|>
 <|assistant|>"""
+
 
 
 # === MAIN ===
