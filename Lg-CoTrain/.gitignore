@@ -7,8 +7,6 @@ new/
 output/
 plots/
 post_result/
-processed/
-processed_old/
 saved_models/
 saved_models_new/
 temp/
