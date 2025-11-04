@@ -15,5 +15,4 @@ s3git.py
 temp.ipynb
 .env
 src/trained_models/
-Data/LIAR/
-src/LIAR/
+LIAR
