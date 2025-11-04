@@ -1,6 +1,7 @@
 import torch
 from torch.utils.data import DataLoader, Dataset
-from transformers import AutoModelForSequenceClassification, AutoTokenizer, AdamW
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from torch.optim import AdamW
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
@@ -15,7 +16,7 @@ LR = 2e-5
 DEVICE = "cuda"
 
 # ======== DATA ========
-df_pseudo = pd.read_csv("unlabel.csv")  # cột: text, pseudo_label
+df_pseudo = pd.read_csv("du_pseudo_phi3_cleaned.csv")  # cột: text, pseudo_label
 
 tokenizer_bert = AutoTokenizer.from_pretrained(BERT_MODEL)
 tokenizer_roberta = AutoTokenizer.from_pretrained(ROBERTA_MODEL)

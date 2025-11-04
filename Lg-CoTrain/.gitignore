@@ -14,4 +14,4 @@ temp/
 s3git.py
 temp.ipynb
 .env
-
+trained_models/

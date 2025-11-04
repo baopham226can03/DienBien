@@ -10,3 +10,4 @@ absl-py
 comet_ml
 accelerate
 bitsandbytes
+protobuf
