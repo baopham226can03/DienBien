@@ -19,6 +19,7 @@ MAX_LEN = 256
 # LOAD DATA
 # ===============================
 df_train = pd.read_csv("label.csv")  # tập train có nhãn thật
+
 df_val = pd.read_csv("val.csv")        # tập validation để tính ER
 
 # ===============================
