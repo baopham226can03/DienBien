@@ -113,10 +113,11 @@ datasets = list(LABELED_SAMPLES.keys())
 # python3 main.py --dataset yelp_review --labeled_sample_idx 0 --hf_model_id_short phi-3 --seed 1234 --plm_id roberta-base --few_shot --cuda_devices 0,1
 def parse_arguments():
     """Parse and validate command line arguments."""
-    parser = argparse.ArgumentParser(description="Co-Training Script")
-    parser.add_argument("--dataset", type=str, choices=datasets + ['reintel'], help="Dataset name")
-    parser.add_argument("--labeled_sample_idx", type=int, default=0, choices=[0], help="Index for labeled samples")  # Only one size for ReINTEL
-    parser.add_argument("--hf_model_id_short", type=str, choices=llm_ids, help="Short ID for the Hugging Face model")
+    parser = argparse.ArgumentParser(description="ReINTEL Co-Training Script")
+    # Simplified arguments for ReINTEL experiment
+    parser.add_argument("--plm_id", type=str, default="bert-base", choices=["bert-base", "roberta-base"],
+                      help="Model type (bert-base or roberta-base)")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     parser.add_argument("--seed", type=int, default=1234, choices=[1234, 4567, 8998], help="Random seed for reproducibility")
     parser.add_argument("--plm_id", type=str, default="roberta-base", choices=plm_ids, help="PLM (bert-base, roberta-base, deberta-base, etc.)")
     parser.add_argument("--pseudo_label_shot", type=int, default=0, help="Number of pseudo labeled samples")
@@ -140,7 +141,7 @@ def parse_arguments():
 
 def set_environment(args):
     """Set environment variables and random seeds."""
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_devices
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Use single GPU
     os.environ['TRANSFORMERS_NO_ADVISORY_WARNINGS'] = 'true'
     transformers_logging.set_verbosity_error()
     
@@ -148,35 +149,46 @@ def set_environment(args):
     random.seed(args.seed)
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(args.seed)
     
-    # Set device configuration
-    if torch.cuda.device_count() >= 2:
-        device_1 = torch.device("cuda:0")
-        device_2 = torch.device("cuda:1")
+    # Set device configuration - use same GPU for both models
+    if torch.cuda.is_available():
+        device_1 = device_2 = 'cuda'
+        print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+        print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f}GB")
     else:
-        device_1 = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        device_2 = device_1
-        
-    return device_1, device_2
-
-
+        device_1 = device_2 = 'cpu'
+        print("No GPU available, using CPU")
 def setup_local_logging(args):
     """Set up logging to file and console."""
-    if not args.setup_local_logging:
-        return None
-    
-    log_dir = f"{ROOT}/output/{args.dataset}/{args.exp_name}"
+    # Always set up logging for basic monitoring
+    log_dir = os.path.join(ROOT, 'logs')
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
-    output_log_path = os.path.join(log_dir, f"log_{args.saved_model_name_suffix}.txt")
     
-    lg.basicConfig(
-        filename=output_log_path,
-        filemode='w',
-        level=lg.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S'
-    )
+    # Create log file with timestamp
+    timestamp = time.strftime("%Y%m%d-%H%M%S")
+    log_file = os.path.join(log_dir, f'reintel_cotrain_{timestamp}.log')
+    
+    # Set up logging to both file and console
+    formatter = lg.Formatter('%(asctime)s - %(message)s', datefmt='%H:%M:%S')
+    
+    # File handler
+    fh = lg.FileHandler(log_file)
+    fh.setLevel(lg.INFO)
+    fh.setFormatter(formatter)
+    
+    # Console handler
+    ch = lg.StreamHandler()
+    ch.setLevel(lg.INFO)
+    ch.setFormatter(formatter)
+    
+    # Setup logger
+    logger = lg.getLogger()
+    logger.setLevel(lg.INFO)
+    logger.addHandler(fh)
+    logger.addHandler(ch)
     
     logger = lg.getLogger()
     return logger
@@ -205,7 +217,17 @@ def load_reintel_dataset(data_dir):
     labeled_data = pd.read_csv(os.path.join(data_dir, 'labeled.csv'))
     pseudo_data = pd.read_csv(os.path.join(data_dir, 'pseudo.csv'))
     test_data = pd.read_csv(os.path.join(data_dir, 'test.csv'))
-    val_data = pd.read_csv(os.path.join(data_dir, 'val.csv'))
+    val_data = test_data.sample(n=int(len(test_data)*0.2), random_state=42)  # Use 20% of test as validation
+    test_data = test_data.drop(val_data.index)  # Remove validation samples from test
+    
+    # Ensure we have exactly 40 samples for labeled data
+    if len(labeled_data) > 40:
+        labeled_data = labeled_data.sample(n=40, random_state=42)
+    
+    # Calculate class weights for weighted loss
+    class_counts = labeled_data['label'].value_counts()
+    total = class_counts.sum()
+    class_weights = {0: total/(2*class_counts[0]), 1: total/(2*class_counts[1])}
     
     # Split labeled data into two equal parts for co-training
     labeled_data = labeled_data.sample(frac=1, random_state=42)  # Shuffle
@@ -217,7 +239,7 @@ def load_reintel_dataset(data_dir):
     auto_labeled_data = pseudo_data.copy()
     auto_labeled_data['label'] = auto_labeled_data['pseudo_label']  # Use pseudo labels
     
-    return training_set_1, training_set_2, test_data, val_data, auto_labeled_data
+    return training_set_1, training_set_2, test_data, val_data, auto_labeled_data, class_weights
 
 def load_dataset_helper(dataset, N, pseudo_label_shot, processed_dir, data_dir, use_correct_labels_only=None, mnli_split=None):
     """Helper function to load datasets based on dataset type."""
@@ -502,9 +524,13 @@ def initialize_models(num_classes, args):
 
 
 
-def setup_optimization(model_1, model_2, dataloaders, training_params, criterion_class=nn.CrossEntropyLoss):
+def setup_optimization(model_1, model_2, dataloaders, training_params, criterion_class=nn.CrossEntropyLoss, class_weights=None):
     """Set up optimizers, schedulers and criterion for training."""
-    criterion = criterion_class(reduction='none')
+    if class_weights is not None:
+        weights = torch.FloatTensor([class_weights[0], class_weights[1]])
+        criterion = criterion_class(weight=weights, reduction='none')
+    else:
+        criterion = criterion_class(reduction='none')
     learning_rate = training_params['learning_rate']
     num_epochs = training_params['num_epochs']
     train_dataloader_1 = dataloaders['train_dataloader_1']
@@ -543,15 +569,17 @@ def setup_optimization(model_1, model_2, dataloaders, training_params, criterion
     return optimizer_params
 
 def get_batch_size(dataset, plm_id):
-    if plm_id == 'bert-base':
-        return 24 if dataset not in ['swag', 'hellaswag'] else 8
+    if dataset == 'reintel':
+        return 8  # Smaller batch size for small dataset
+    elif plm_id == 'bert-base':
+        return 16
     elif plm_id == 'roberta-base':
-        return 24 if dataset not in ['swag', 'hellaswag'] else 8
+        return 16
     elif plm_id == 'deberta-base':
-        return 16 if dataset not in ['swag', 'hellaswag'] else 4
+        return 16
     else:
-        # default fallback
-        return 8
+        print(f"Model type {plm_id} not recognized for batch size. Using default batch size of 16.")
+        return 16
 
 
 
