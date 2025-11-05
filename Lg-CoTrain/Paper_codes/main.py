@@ -704,7 +704,6 @@ def main():
     
   
     
-    
     # Generate initial weights
     log_message(message='Generating initial weights', args=args)
     generator = WeightGenerator(
@@ -779,7 +778,6 @@ def main():
         dataloaders,
         training_params
     )
-    
     
     
     # Fine-tune models
