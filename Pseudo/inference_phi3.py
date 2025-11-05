@@ -4,36 +4,55 @@ from tqdm import tqdm
 import pandas as pd
 import re
 import time
+import json
 
 # === CONFIG ===
 MODEL_NAME = "microsoft/phi-3-medium-4k-instruct"
-INPUT_FILE = "train_unlabeled.csv"   # file chứa 1000 mẫu
-# INPUT_FILE = "a.csv"   # file chứa 1000 mẫu
+INPUT_FILE = "train_unlabeled.csv"   # file chứa dữ liệu input (cột "text")
 OUTPUT_FILE = "du_pseudo_phi3.csv"
-MAX_NEW_TOKENS = 5     # sinh ngắn, chỉ cần số 0/1
+MAX_NEW_TOKENS = 10
 BATCH_SIZE = 32
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-DEBUG_MODE = False  # tắt debug để giảm logging
+DEBUG_MODE = True  # bật log chi tiết
 
 
-
-# === PROMPT ===
+# === PROMPT (biased toward label=1) ===
 def build_prompt(text: str) -> str:
     return f"""<|system|>
-You are an expert fact-checker. Carefully read the following news article and make an objective, balanced, and fair judgment.
-Your task is to decide whether the article is primarily:
-1 = TRUE (accurate, verifiable)
-0 = FALSE (misleading or incorrect)
-You MUST NOT explain, justify, or output any extra characters, spaces, or words — only a single digit: either "0" or "1".
-If the information cannot be verified, is ambiguous, or partially true/false, always classify it as class 0 (FALSE).
-Return **ONLY** one character: "0" or "1".
+You are a JSON generator that outputs only valid JSON objects.
+You must classify the following Vietnamese text as *factual* or *non-factual*.
+
+Your priority:
+- Be generous when detecting factual statements.
+- When unsure, prefer labeling as factual (label = 1).
+- Do not penalize emotionally neutral or partially factual statements; they still count as factual.
+
+Rules:
+- Output ONLY one JSON line.
+- The JSON format MUST be exactly: {{"label": 1}} or {{"label": 0}}.
+- Do NOT explain or add any other text.
+- Respond strictly as JSON, nothing else.
+
+Meaning:
+- 1 = factual, verifiable, or mostly factual statement
+- 0 = clearly non-factual, emotional, opinionated, or unverifiable
+
+Guidance examples (bias toward label 1):
+- “Hôm nay trời nắng ở Hà Nội.” → {{"label": 1}}
+- “Tôi nghĩ sản phẩm này tuyệt vời.” → {{"label": 0}}
+- “TP.HCM có nhiều trường đại học.” → {{"label": 1}}
+- “Chắc là mai mưa.” → {{"label": 0}}
+- “Có khả năng nhiệt độ tăng vào mùa hè.” → {{"label": 1}}
+
+Reinforce your judgment:
+If the text *can possibly* be verified or sounds factual → choose 1.
+Only choose 0 if it is obviously subjective or unverifiable.
 <|end|>
 <|user|>
-{text}
-
-# For any unclear or unverifiable samples, always classify them as class 0 (FALSE).
+Text: "{text}"
 <|end|>
-<|assistant|>"""
+<|assistant|>
+"""
 
 
 
@@ -54,53 +73,60 @@ def main():
     texts = df["text"].astype(str).tolist()
     outputs = []
 
-    print(f"Processing {len(texts)} samples...", flush=True)
+    print(f"Processing {len(texts)} samples...\n", flush=True)
     start = time.time()
 
     for i in tqdm(range(0, len(texts), BATCH_SIZE)):
-        batch_texts = texts[i:i+BATCH_SIZE]
+        batch_texts = texts[i:i + BATCH_SIZE]
         batch_prompts = [build_prompt(t) for t in batch_texts]
 
-        # Tokenize batch
         inputs = tokenizer(batch_prompts, return_tensors="pt", padding=True, truncation=True, max_length=1024).to(DEVICE)
 
-        # Generate responses
         with torch.no_grad():
             batch_outputs = model.generate(
                 **inputs,
                 max_new_tokens=MAX_NEW_TOKENS,
-                temperature=0.7,
-                do_sample=True,
+                temperature=0.0,   # cực thấp để deterministic
                 top_p=0.9,
+                do_sample=False,   # tắt sampling ngẫu nhiên
                 use_cache=True
             )
 
-        # Parse model outputs
         for idx, output in enumerate(batch_outputs):
             decoded = tokenizer.decode(output, skip_special_tokens=True)
             answer = decoded.split("<|assistant|>")[-1].strip()
 
-            # Extract only the last number from the response
-            numbers = re.findall(r'\d+', answer)
-            if numbers:
-                label = int(numbers[-1])
-                # Nếu nhãn khác 0 và 1 thì gán là 0 (giả)
-                if label not in [0, 1]:
-                    label = 0
-            else:
-                label = 0  # fallback FAKE
+            if DEBUG_MODE:
+                print("\n" + "-" * 80)
+                print(f"📝 Input text: {batch_texts[idx][:200]}...")
+                print(f"🔍 Raw model output:\n{answer}")
 
-            # Debug display only shows final output
-            if DEBUG_MODE and len(outputs) < 10:
-                print(f"\nSample {len(outputs)+1}: {label}")
+            # === PARSE JSON (chỉ lấy JSON cuối cùng) ===
+            try:
+                json_matches = re.findall(r'\{.*?\}', answer)
+                if json_matches:
+                    json_str = json_matches[-1]  # chỉ lấy JSON cuối cùng
+                    result = json.loads(json_str)
+                    label = result.get("label", 0)
+                    if label not in [0, 1]:
+                        label = 0
+                else:
+                    label = 0
+            except Exception as e:
+                if DEBUG_MODE:
+                    print(f"⚠️ Parse error: {str(e)}")
+                label = 0
 
             outputs.append(label)
-            # Only keep the final label, no raw responses needed
+
+            if DEBUG_MODE:
+                print(f"✅ Final label: {label}")
+                print("-" * 80)
 
         del inputs, batch_outputs
         torch.cuda.empty_cache()
 
-    # Save results with only the labels
+    # === SAVE OUTPUT ===
     df["pseudo_label"] = outputs
     df.to_csv(OUTPUT_FILE, index=False)
 
@@ -108,12 +134,12 @@ def main():
     duration = end - start
     real_count = outputs.count(1)
     fake_count = outputs.count(0)
-    
+
     print(f"\nProcessing completed in {duration:.2f} seconds")
     print(f"Results saved to: {OUTPUT_FILE}")
     print(f"Statistics: {real_count} REAL, {fake_count} FAKE")
     print(f"\n{'='*60}")
-    print(f"✅ Done {len(outputs)} samples in {time.time()-start:.1f}s")
+    print(f"✅ Done {len(outputs)} samples in {duration:.1f}s")
     print(f"📊 Label distribution (1=REAL, 0=FAKE):")
     print(f"   - REAL (1): {real_count} ({real_count/len(outputs)*100:.1f}%)")
     print(f"   - FAKE (0): {fake_count} ({fake_count/len(outputs)*100:.1f}%)")

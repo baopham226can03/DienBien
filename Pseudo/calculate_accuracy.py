@@ -4,43 +4,67 @@ from sklearn.metrics import accuracy_score, classification_report
 
 def calculate_accuracy():
     try:
-        # Đọc file CSV
-        df = pd.read_csv('du_pseudo_phi3.csv')
-        dff = pd.read_csv('train_unlabeled_backup.csv')
-        # Lấy toàn bộ dữ liệu
-        labeled_data = df.copy()
-        unlabeled_data = dff.copy()
-        if labeled_data.empty:
-            print("File dữ liệu trống!")
+        # Đọc file CSV chứa nhãn thật
+        df_true = pd.read_csv('train_unlabeled_backup.csv')
+        # Đọc file CSV chứa nhãn pseudo
+        df_pseudo = pd.read_csv('du_pseudo_phi3.csv')
+        
+        # Kiểm tra số lượng mẫu
+        if len(df_true) != len(df_pseudo):
+            print("Lỗi: Số lượng mẫu trong hai file không khớp nhau!")
             return
             
         # Lấy nhãn thật và nhãn pseudo
-        true_labels = unlabeled_data['label'].values
-        pseudo_labels = labeled_data['pseudo_label'].values
+        true_labels = df_true['label'].values
+        pseudo_labels = df_pseudo['pseudo_label'].values
         
-        # Kiểm tra số lượng mẫu
-        print(f"Số lượng mẫu có nhãn: {len(true_labels)}")
+        # Tạo nhãn pseudo đảo ngược (0->1, 1->0)
+        pseudo_labels_inverted = 1 - pseudo_labels
+        
+        # In thông tin cơ bản
+        print(f"Tổng số mẫu: {len(true_labels)}")
         
         # In phân bố nhãn thật
-        print("\nPhân bố nhãn thật:")
-        print(labeled_data['label'].value_counts().sort_index())
+        print("\nPhân bố nhãn thật (từ train_unlabeled_backup.csv):")
+        print(df_true['label'].value_counts().sort_index())
         
         # In phân bố nhãn pseudo
-        print("\nPhân bố nhãn pseudo:")
-        print(labeled_data['pseudo_label'].value_counts().sort_index())
+        print("\nPhân bố nhãn pseudo gốc (từ du_pseudo_phi3.csv):")
+        print(df_pseudo['pseudo_label'].value_counts().sort_index())
         
-        # Tính độ chính xác
-        accuracy = accuracy_score(true_labels, pseudo_labels)
-        print(f"\nĐộ chính xác: {accuracy:.4f}")
+        # In phân bố nhãn pseudo đảo ngược
+        print("\nPhân bố nhãn pseudo sau khi đảo (0->1, 1->0):")
+        unique, counts = np.unique(pseudo_labels_inverted, return_counts=True)
+        print(pd.Series(counts, index=unique).sort_index())
         
-        # Lấy danh sách các nhãn duy nhất
-        unique_labels = sorted(list(set(true_labels) | set(pseudo_labels)))
+        # Tính độ chính xác cho cả 2 trường hợp
+        accuracy_original = accuracy_score(true_labels, pseudo_labels)
+        accuracy_inverted = accuracy_score(true_labels, pseudo_labels_inverted)
         
-        # In báo cáo chi tiết
+        print("\n=== KẾT QUẢ VỚI NHÃN PSEUDO GỐC ===")
+        print(f"Độ chính xác: {accuracy_original:.4f}")
         print("\nBáo cáo chi tiết:")
         print(classification_report(true_labels, pseudo_labels, 
-                                 labels=unique_labels,
-                                 zero_division=0))
+                                 labels=[0, 1],
+                                 target_names=['Giả (0)', 'Thật (1)'],
+                                 digits=4))
+        
+        print("\n=== KẾT QUẢ VỚI NHÃN PSEUDO ĐẢO NGƯỢC ===")
+        print(f"Độ chính xác: {accuracy_inverted:.4f}")
+        print("\nBáo cáo chi tiết:")
+        print(classification_report(true_labels, pseudo_labels_inverted, 
+                                 labels=[0, 1],
+                                 target_names=['Giả (0)', 'Thật (1)'],
+                                 digits=4))
+        
+        # Kết luận
+        print("\n=== KẾT LUẬN ===")
+        if accuracy_original > accuracy_inverted:
+            print("Nhãn pseudo gốc cho kết quả tốt hơn!")
+        elif accuracy_original < accuracy_inverted:
+            print("Nhãn pseudo đảo ngược cho kết quả tốt hơn!")
+        else:
+            print("Cả hai cách cho kết quả như nhau!")
                                  
     except Exception as e:
         print(f"Có lỗi xảy ra: {str(e)}")
