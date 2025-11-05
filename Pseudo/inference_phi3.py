@@ -17,22 +17,21 @@ DEBUG_MODE = False  # tắt debug để giảm logging
 
 
 
-
 # === PROMPT ===
 def build_prompt(text: str) -> str:
     return f"""<|system|>
-Bạn là một chuyên gia kiểm chứng thông tin. Hãy đọc kỹ bài viết sau và đưa ra đánh giá khách quan, cân bằng, công bằng.
-Nhiệm vụ của bạn là xác định xem bài viết chủ yếu là:
-1 = THẬT (chính xác, có thể kiểm chứng)
-0 = GIẢ (sai lệch, gây hiểu lầm)
-Bạn tuyệt đối KHÔNG được giải thích, KHÔNG được viết thêm bất kỳ ký tự, dấu cách, hoặc từ ngữ nào khác ngoài một trong hai ký tự sau: 0 hoặc 1.
-Nếu không không thể kiểm chứng được, không rõ thật giả, kết quả nằm giữa thì luôn cho nó là lớp 0 (tin giả).
-Chỉ trả về **DUY NHẤT** một ký tự: "0" hoặc "1".
+You are an expert fact-checker. Carefully read the following news article and make an objective, balanced, and fair judgment.
+Your task is to decide whether the article is primarily:
+1 = TRUE (accurate, verifiable)
+0 = FALSE (misleading or incorrect)
+You MUST NOT explain, justify, or output any extra characters, spaces, or words — only a single digit: either "0" or "1".
+If the information cannot be verified, is ambiguous, or partially true/false, always classify it as class 0 (FALSE).
+Return **ONLY** one character: "0" or "1".
 <|end|>
 <|user|>
 {text}
 
-# **Tất cả những mẫu không rõ, không thể kiểm chứng được thì luôn cho nó là lớp 0 (tin giả).**
+# For any unclear or unverifiable samples, always classify them as class 0 (FALSE).
 <|end|>
 <|assistant|>"""
 
