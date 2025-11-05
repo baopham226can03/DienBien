@@ -212,6 +212,26 @@ class TextOnlyProcessor(BaseDatasetProcessor, GenericLabelProcessor):
 #             raise ValueError(f"Unsupported dataset: {dataset}")
 #         return processors[dataset]
 
+class ReINTELProcessor(BaseDatasetProcessor, GenericLabelProcessor):
+    def __init__(self, label_map=None):
+        self.label_map = {'false': 0, 'true': 1} if label_map is None else label_map
+
+    def process_dataframe(self, dataframe):
+        # Add id column if not exists
+        if 'id' not in dataframe.columns:
+            dataframe['id'] = dataframe.index
+        
+        # Convert label values using label_map
+        dataframe['label'] = dataframe['label'].apply(lambda l: self.get_numeric_label(l, self.label_map))
+        
+        # Rename text column to sentence for consistency with other processors
+        if 'text' in dataframe.columns:
+            dataframe['sentence'] = dataframe['text']
+        
+        # Return only necessary columns
+        return dataframe[['id', 'sentence', 'label']]
+
+
 class TextDataset(Dataset):
     def __init__(self, dataframe, tokenizer, max_len, dataset='sci_nli', include_augmented=False):
         self.dataset = dataset
@@ -302,7 +322,8 @@ class TextDataset(Dataset):
             'qqp': {'duplicate': 1, 'not_duplicate': 0},
             'swag': {'0': 0, '1': 1, '2': 2, '3': 3},
             'hellaswag': {'0': 0, '1': 1, '2': 2, '3': 3},
-            'mnli': {'entailment': 0, 'neutral': 1, 'contradiction': 2}
+            'mnli': {'entailment': 0, 'neutral': 1, 'contradiction': 2},
+            'reintel': {'false': 0, 'true': 1}
         }
         processors = {
             'sci_nli': SciNLIDatasetProcessor(),
@@ -314,7 +335,8 @@ class TextDataset(Dataset):
             'yahoo_answers': TextOnlyProcessor(label_maps['yahoo_answers']),
             'amazon_review': TextOnlyProcessor(label_maps['amazon_review']),
             'yelp_review': TextOnlyProcessor(label_maps['yelp_review']),
-            'aclImdb': TextOnlyProcessor(label_maps['aclImdb'])
+            'aclImdb': TextOnlyProcessor(label_maps['aclImdb']),
+            'reintel': ReINTELProcessor(label_maps['reintel'])
         }
         if dataset not in processors:
             raise ValueError(f"Unsupported dataset: {dataset}")

@@ -39,7 +39,8 @@ from src.loss import SmoothCrossEntropyLoss
 from trainer_classes import WeightGenerator, CoTrainer, DualModelTrainer
 
 # Constants
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent  # Changed to current directory
+DATA_DIR = ROOT / 'Data'  # Point to Data folder in current directory
 MAX_LEN = 300
 EPOCH_PATIENCE = 5
 
@@ -54,7 +55,8 @@ LABELED_SAMPLES = {
     'qqp': [100, 500],
     'swag': [200, 1000],
     'hellaswag': [200, 1000],
-    'mnli': [150, 750]
+    'mnli': [150, 750],
+    'reintel': [40]  # Only one size for ReINTEL dataset
 }
 
 NUM_CLASSES = {
@@ -67,7 +69,8 @@ NUM_CLASSES = {
     'qqp': 2,
     'swag': 1,
     'hellaswag': 1,
-    'mnli': 3
+    'mnli': 3,
+    'reintel': 2  # Binary classification for ReINTEL
 }
 
 # Model mapping for easier reference
@@ -111,8 +114,8 @@ datasets = list(LABELED_SAMPLES.keys())
 def parse_arguments():
     """Parse and validate command line arguments."""
     parser = argparse.ArgumentParser(description="Co-Training Script")
-    parser.add_argument("--dataset", type=str,  choices=datasets, help="Dataset name")
-    parser.add_argument("--labeled_sample_idx", type=int, choices=[0, 1], help="Index for labeled samples")
+    parser.add_argument("--dataset", type=str, choices=datasets + ['reintel'], help="Dataset name")
+    parser.add_argument("--labeled_sample_idx", type=int, default=0, choices=[0], help="Index for labeled samples")  # Only one size for ReINTEL
     parser.add_argument("--hf_model_id_short", type=str, choices=llm_ids, help="Short ID for the Hugging Face model")
     parser.add_argument("--seed", type=int, default=1234, choices=[1234, 4567, 8998], help="Random seed for reproducibility")
     parser.add_argument("--plm_id", type=str, default="roberta-base", choices=plm_ids, help="PLM (bert-base, roberta-base, deberta-base, etc.)")
@@ -195,6 +198,27 @@ def setup_comet_experiment(args):
     
 
 
+def load_reintel_dataset(data_dir):
+    """Helper function to load ReINTEL dataset with its specific structure."""
+    
+    # Load all data files
+    labeled_data = pd.read_csv(os.path.join(data_dir, 'labeled.csv'))
+    pseudo_data = pd.read_csv(os.path.join(data_dir, 'pseudo.csv'))
+    test_data = pd.read_csv(os.path.join(data_dir, 'test.csv'))
+    val_data = pd.read_csv(os.path.join(data_dir, 'val.csv'))
+    
+    # Split labeled data into two equal parts for co-training
+    labeled_data = labeled_data.sample(frac=1, random_state=42)  # Shuffle
+    split_idx = len(labeled_data) // 2
+    training_set_1 = labeled_data.iloc[:split_idx].copy()
+    training_set_2 = labeled_data.iloc[split_idx:].copy()
+    
+    # Prepare pseudo-labeled data
+    auto_labeled_data = pseudo_data.copy()
+    auto_labeled_data['label'] = auto_labeled_data['pseudo_label']  # Use pseudo labels
+    
+    return training_set_1, training_set_2, test_data, val_data, auto_labeled_data
+
 def load_dataset_helper(dataset, N, pseudo_label_shot, processed_dir, data_dir, use_correct_labels_only=None, mnli_split=None):
     """Helper function to load datasets based on dataset type."""
     
@@ -204,7 +228,9 @@ def load_dataset_helper(dataset, N, pseudo_label_shot, processed_dir, data_dir, 
     def load_data(file_name):
         return pd.read_csv(os.path.join(data_dir, dataset, file_name), sep='\t')
     
-    if dataset == 'sci_nli':
+    if dataset == 'reintel':
+        return load_reintel_dataset(os.path.join(data_dir))
+    elif dataset == 'sci_nli':
         trainingSet_1 = load_data('train_1.tsv')
         trainingSet_2 = load_data('train_2.tsv')
         testingSet = load_data('test.tsv')
@@ -577,10 +603,10 @@ def main():
     device_1, device_2 = set_environment(args)
     unique_devices = len(set([device_1, device_2]))
 
-    
+    # Create necessary directories if they don't exist
+    os.makedirs(DATA_DIR, exist_ok=True)
     
     # Determine model and dataset configurations
-    # dataset = args.dataset
     N = LABELED_SAMPLES[args.dataset][args.labeled_sample_idx] // 2
     hf_model_name = HF_MODEL_MAPPING[args.hf_model_id_short]
     
@@ -602,9 +628,9 @@ def main():
     args.saved_model_name_suffix = saved_model_name_suffix
     
     # Set up directories
-    data_dir = os.path.join(ROOT, 'data')
-    saved_model_dir = f"{ROOT}/saved_models/{args.dataset}/{args.exp_name}"
-    processed_dir = f"{ROOT}/processed/{args.dataset}/{args.hf_model_id_short}"
+    data_dir = DATA_DIR  # Use the Data directory in current folder
+    saved_model_dir = ROOT / 'saved_models' / args.dataset / args.exp_name
+    processed_dir = ROOT / 'processed' / args.dataset / args.hf_model_id_short
     # save_dir = os.path.join(processed_dir, f'N_{N}')
     
     args.saved_model_dir = saved_model_dir
