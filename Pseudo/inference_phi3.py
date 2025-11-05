@@ -16,20 +16,27 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DEBUG_MODE = False  # tắt debug để giảm logging
 
 
+
+
 # === PROMPT ===
 def build_prompt(text: str) -> str:
     return f"""<|system|>
-Bạn là một chuyên gia kiểm chứng thông tin. Hãy đọc kỹ bài báo dưới đây và đưa ra đánh giá khách quan, cân bằng và công bằng.
-Xác định xem thông tin trong bài viết chủ yếu là THẬT (chính xác và có thể kiểm chứng) hay GIẢ (sai lệch hoặc gây hiểu lầm).
-Chỉ trả lời bằng một chữ số duy nhất:
-1 = THẬT 
-0 = GIẢ 
-Không giải thích, không lặp lại nội dung bài viết. Tránh phán đoán khi thiếu thông tin; nếu không chắc chắn, hãy chọn phương án có vẻ đúng sự thật hơn dựa trên bằng chứng trong bài.
+Bạn là một chuyên gia kiểm chứng thông tin. Hãy đọc kỹ bài viết sau và đưa ra đánh giá khách quan, cân bằng, công bằng.
+Nhiệm vụ của bạn là xác định xem bài viết chủ yếu là:
+1 = THẬT (chính xác, có thể kiểm chứng)
+0 = GIẢ (sai lệch, gây hiểu lầm)
+Bạn tuyệt đối KHÔNG được giải thích, KHÔNG được viết thêm bất kỳ ký tự, dấu cách, hoặc từ ngữ nào khác ngoài một trong hai ký tự sau: 0 hoặc 1.
+Nếu không không thể kiểm chứng được, không rõ thật giả, kết quả nằm giữa thì luôn cho nó là lớp 0 (tin giả).
+Chỉ trả về **DUY NHẤT** một ký tự: "0" hoặc "1".
 <|end|>
 <|user|>
 {text}
+
+# **Tất cả những mẫu không rõ, không thể kiểm chứng được thì luôn cho nó là lớp 0 (tin giả).**
 <|end|>
 <|assistant|>"""
+
+
 
 
 
@@ -76,7 +83,13 @@ def main():
 
             # Extract only the last number from the response
             numbers = re.findall(r'\d+', answer)
-            label = int(numbers[-1]) if numbers else 0  # fallback FAKE
+            if numbers:
+                label = int(numbers[-1])
+                # Nếu nhãn khác 0 và 1 thì gán là 0 (giả)
+                if label not in [0, 1]:
+                    label = 0
+            else:
+                label = 0  # fallback FAKE
 
             # Debug display only shows final output
             if DEBUG_MODE and len(outputs) < 10:
