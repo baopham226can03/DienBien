@@ -1,4 +1,38 @@
-__pycache__/
-*.pyc
+# Folders to ignore
+baselines/
+cotr_df/
+legacy/
+llm/
+new/
+output/
+plots/
+post_result/
+saved_models/
+saved_models_new/
+temp/
+
+# LIAR dataset folders
+Data/LIAR/
+src/LIAR/
+
+# Trained models
+src/trained_models/
+src/finetuned_bert/
+finetuned_bert/
+src/finetuned_roberta/
+finetuned_roberta/
+# Files to ignore
+s3git.py
+temp.ipynb
+
+# Python environment
 .env
-chat_bot/
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+*.log

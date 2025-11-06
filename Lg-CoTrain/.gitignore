@@ -17,7 +17,10 @@ src/LIAR/
 
 # Trained models
 src/trained_models/
-
+src/finetuned_bert/
+finetuned_bert/
+src/finetuned_roberta/
+finetuned_roberta/
 # Files to ignore
 s3git.py
 temp.ipynb
