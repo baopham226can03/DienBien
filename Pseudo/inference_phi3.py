@@ -20,7 +20,7 @@ DEBUG_MODE = True  # bật log chi tiết
 def build_prompt(text: str) -> str:
     return f"""<|system|>
 You are a JSON generator that outputs only valid JSON objects.
-You must classify the following Vietnamese text as *factual* or *non-factual*.
+You must classify the following text as *factual* or *non-factual*.
 
 Your priority:
 - Be generous when detecting factual statements.

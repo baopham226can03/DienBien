@@ -5,10 +5,9 @@ from sklearn.metrics import accuracy_score, classification_report
 def calculate_accuracy():
     try:
         # Đọc file CSV chứa nhãn thật
-        df_true = pd.read_csv('train_unlabeled_backup.csv')
+        df_true = pd.read_csv('backup.csv')
         # Đọc file CSV chứa nhãn pseudo
-        df_pseudo = pd.read_csv('du_pseudo_phi3.csv')
-        
+        df_pseudo = pd.read_csv('unlabel.csv')
         # Kiểm tra số lượng mẫu
         if len(df_true) != len(df_pseudo):
             print("Lỗi: Số lượng mẫu trong hai file không khớp nhau!")
