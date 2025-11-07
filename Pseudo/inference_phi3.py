@@ -8,7 +8,8 @@ import json
 
 # === CONFIG ===
 MODEL_NAME = "microsoft/phi-3-medium-4k-instruct"
-INPUT_FILE = "train_unlabeled.csv"   # file chứa dữ liệu input (cột "text")
+INPUT_FILE = "unlabel.csv"   # file chứa dữ liệu input (cột "text")
+# INPUT_FILE = "a.csv"   # file chứa dữ liệu input (cột "text")
 OUTPUT_FILE = "du_pseudo_phi3.csv"
 MAX_NEW_TOKENS = 10
 BATCH_SIZE = 32
@@ -23,9 +24,8 @@ You are a JSON generator that outputs only valid JSON objects.
 You must classify the following text as *factual* or *non-factual*.
 
 Your priority:
-- Be generous when detecting factual statements.
-- When unsure, prefer labeling as factual (label = 1).
-- Do not penalize emotionally neutral or partially factual statements; they still count as factual.
+- Be strict when detecting factual statements.
+
 
 Rules:
 - Output ONLY one JSON line.
@@ -34,25 +34,27 @@ Rules:
 - Respond strictly as JSON, nothing else.
 
 Meaning:
-- 1 = factual, verifiable, or mostly factual statement
-- 0 = clearly non-factual, emotional, opinionated, or unverifiable
+- 1 = clearly factual, verifiable, or objective
+- 0 = unfactual, opinion-based, speculative, or subjective
 
-Guidance examples (bias toward label 1):
-- “Hôm nay trời nắng ở Hà Nội.” → {{"label": 1}}
-- “Tôi nghĩ sản phẩm này tuyệt vời.” → {{"label": 0}}
-- “TP.HCM có nhiều trường đại học.” → {{"label": 1}}
-- “Chắc là mai mưa.” → {{"label": 0}}
-- “Có khả năng nhiệt độ tăng vào mùa hè.” → {{"label": 1}}
+Guidance examples:
+- “The sun rises in the east.” → {{"label": 1}}
+- “I think this movie is amazing.” → {{"label": 0}}
+- “Paris is the capital of France.” → {{"label": 1}}
+- “Maybe it will rain tomorrow.” → {{"label": 0}}
+- “Temperatures might increase in summer.” → {{"label": 0}}
+- “In my opinion, this policy is fair.” → {{"label": 0}}
+- “Water boils at 100°C at sea level.” → {{"label": 1}}
 
-Reinforce your judgment:
-If the text *can possibly* be verified or sounds factual → choose 1.
-Only choose 0 if it is obviously subjective or unverifiable.
+
+
 <|end|>
 <|user|>
 Text: "{text}"
 <|end|>
 <|assistant|>
 """
+
 
 
 
