@@ -1,0 +1,11 @@
+#2 Iter:
+
+## Politifact Dataset:
+sheepdog:   Total_Test_Accuracy: 0.8611 | Prec: 0.8819 | Rec: 0.8611 | F1: 0.8590
+sheepdog++: Total Test Accuracy: 0.8889 | Prec: 0.8893 | Rec: 0.8889 | F1: 0.8889
+
+## Gosipcop Dataset:
+sheepdog:   Total Test_Accuracy: 0.7522 | Prec: 0.7537 | Rec: 0.7522 | F1: 0.7518
+sheepdog++: Total Test Accuracy: 0.7680 | Prec: 0.7691 | Rec: 0.7680 | F1: 0.7678
+
+

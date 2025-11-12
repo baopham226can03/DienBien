@@ -153,14 +153,39 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
     total_steps = 10000
     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
 
+    # --- Kiểm tra augmentations theo dataset ---
+    try:
+        x_train_res1, x_train_res2, y_train_fg, y_train_fg_m, y_train_fg_t = load_reframing(datasetname)
+        # Đảm bảo kích thước trùng với x_train
+        n_train = len(x_train)
+        if len(x_train_res1) != n_train or len(x_train_res2) != n_train:
+            print(f"[WARNING] Augment size mismatch: x_train={n_train}, aug1={len(x_train_res1)}, aug2={len(x_train_res2)}. Using fallback padding.")
+            # Nếu thiếu, lặp lại phần tử cuối cho đủ
+            def pad_list(lst, n):
+                if len(lst) == 0:
+                    return ["" for _ in range(n)]
+                return lst + [lst[-1]] * (n - len(lst))
+            x_train_res1 = pad_list(list(x_train_res1), n_train)
+            x_train_res2 = pad_list(list(x_train_res2), n_train)
+            y_train_fg = pad_list(list(y_train_fg), n_train)
+            y_train_fg_m = pad_list(list(y_train_fg_m), n_train)
+            y_train_fg_t = pad_list(list(y_train_fg_t), n_train)
+    except Exception as e:
+        print(f"[INFO] No augmentations found for dataset {datasetname}. Using identity fallback.")
+        # fallback: dùng chính x_train làm augmentation
+        x_train_res1 = x_train_res2 = x_train
+        y_train_fg = y_train_fg_m = y_train_fg_t = y_train
+
     for epoch in range(n_epochs):
         model.train()
-        x_train_res1, x_train_res2, y_train_fg, y_train_fg_m, y_train_fg_t = load_reframing(args.dataset_name)
-        train_loader = create_train_loader(x_train, x_train_res1, x_train_res2, y_train, y_train_fg, y_train_fg_m, y_train_fg_t, tokenizer, max_len, batch_size)
+        train_loader = create_train_loader(
+            x_train, x_train_res1, x_train_res2, y_train,
+            y_train_fg, y_train_fg_m, y_train_fg_t,
+            tokenizer, max_len, batch_size
+        )
 
         avg_loss = []
         avg_acc = []
-        batch_idx = 0
 
         for Batch_data in tqdm(train_loader):
 
@@ -174,13 +199,15 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
             fg_labels = Batch_data["fg_label"].to(device)
             fg_labels_aug1 = Batch_data["fg_label_aug1"].to(device)
             fg_labels_aug2 = Batch_data["fg_label_aug2"].to(device)
-            
+
             out_labels, out_labels_bi = model(input_ids=input_ids, attention_mask=attention_mask)
             out_labels_aug1, out_labels_bi_aug1  = model(input_ids=input_ids_aug1, attention_mask=attention_mask_aug1)
             out_labels_aug2, out_labels_bi_aug2 = model(input_ids=input_ids_aug2, attention_mask=attention_mask_aug2)
+
             fg_criterion = nn.BCELoss()
-            finegrain_loss = (fg_criterion(F.sigmoid(out_labels),fg_labels) + fg_criterion(F.sigmoid(out_labels_aug1),fg_labels_aug1) + \
-                               fg_criterion(F.sigmoid(out_labels_aug2),fg_labels_aug2)) / 3
+            finegrain_loss = (fg_criterion(F.sigmoid(out_labels),fg_labels) +
+                              fg_criterion(F.sigmoid(out_labels_aug1),fg_labels_aug1) +
+                              fg_criterion(F.sigmoid(out_labels_aug2),fg_labels_aug2)) / 3
 
             out_probs = F.softmax(out_labels_bi, dim = -1)
             aug_log_prob1 = F.log_softmax(out_labels_bi_aug1, dim = -1)
@@ -191,7 +218,7 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
 
             cons_criterion = nn.KLDivLoss(reduction = 'batchmean')
             cons_loss = 0.5 * cons_criterion(aug_log_prob1, out_probs) + 0.5 * cons_criterion(aug_log_prob2, out_probs)
-       
+
             loss = sup_loss + cons_loss + finegrain_loss
 
             optimizer.zero_grad()
@@ -199,23 +226,21 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
             avg_loss.append(loss.item())
             optimizer.step()
             scheduler.step()
+
             _, pred = out_labels_bi.max(dim=-1)
             correct = pred.eq(targets).sum().item()
             train_acc = correct / len(targets)
             avg_acc.append(train_acc)
-            batch_idx = batch_idx + 1
 
         train_losses.append(np.mean(avg_loss))
         train_accs.append(np.mean(avg_acc))
 
+        print(f"Iter {iter:03d} | Epoch {epoch:05d} | Train Acc. {train_acc:.4f}")
 
-        print("Iter {:03d} | Epoch {:05d} | Train Acc. {:.4f}".format(iter, epoch, train_acc))
-
+        # Evaluation giống SheepDog gốc
         if epoch == n_epochs - 1:
             model.eval()
-            y_pred = []
-            y_pred_res = []
-            y_test = []
+            y_pred, y_pred_res, y_test = [], [], []
 
             for Batch_data in tqdm(test_loader):
                 with torch.no_grad():
@@ -224,7 +249,6 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
                     targets = Batch_data["labels"].to(device)
                     _, val_out = model(input_ids=input_ids, attention_mask=attention_mask)
                     _, val_pred = val_out.max(dim=1)
-
                     y_pred.append(val_pred)
                     y_test.append(targets)
 
@@ -236,37 +260,34 @@ def train_model(tokenizer, max_len, n_epochs, batch_size, datasetname, iter):
                     _, val_pred_aug = val_out_aug.max(dim=1)
                     y_pred_res.append(val_pred_aug)
 
-
             y_pred = torch.cat(y_pred, dim=0)
             y_test = torch.cat(y_test, dim=0)
             y_pred_res = torch.cat(y_pred_res, dim=0)
 
-            acc = accuracy_score(y_test.detach().cpu().numpy(), y_pred.detach().cpu().numpy())
-            precision, recall, fscore, _ = score(y_test.detach().cpu().numpy(), y_pred.detach().cpu().numpy(), average='macro')
+            acc = accuracy_score(y_test.cpu().numpy(), y_pred.cpu().numpy())
+            precision, recall, fscore, _ = score(y_test.cpu().numpy(), y_pred.cpu().numpy(), average='macro')
 
+            acc_res = accuracy_score(y_test.cpu().numpy(), y_pred_res.cpu().numpy())
+            precision_res, recall_res, fscore_res, _ = score(y_test.cpu().numpy(), y_pred_res.cpu().numpy(), average='macro')
 
-            acc_res = accuracy_score(y_test.detach().cpu().numpy(), y_pred_res.detach().cpu().numpy())
-            precision_res, recall_res, fscore_res, _ = score(y_test.detach().cpu().numpy(), y_pred_res.detach().cpu().numpy(), average='macro')
+    torch.save(model.state_dict(), f'checkpoints/{datasetname}_iter{iter}.m')
 
-
-    torch.save(model.state_dict(), 'checkpoints/' + datasetname + '_iter' + str(iter) + '.m')
-
-    print("-----------------End of Iter {:03d}-----------------".format(iter))
+    print(f"-----------------End of Iter {iter:03d}-----------------")
     print(['Global Test Accuracy:{:.4f}'.format(acc),
-        'Precision:{:.4f}'.format(precision),
-        'Recall:{:.4f}'.format(recall),
-        'F1:{:.4f}'.format(fscore)])
+           'Precision:{:.4f}'.format(precision),
+           'Recall:{:.4f}'.format(recall),
+           'F1:{:.4f}'.format(fscore)])
 
     print("-----------------Restyle-----------------")
     print(['Global Test Accuracy:{:.4f}'.format(acc_res),
-        'Precision:{:.4f}'.format(precision_res),
-        'Recall:{:.4f}'.format(recall_res),
-        'F1:{:.4f}'.format(fscore_res)])
-    
+           'Precision:{:.4f}'.format(precision_res),
+           'Recall:{:.4f}'.format(recall_res),
+           'F1:{:.4f}'.format(fscore_res)])
+
     return acc, precision, recall, fscore, acc_res, precision_res, recall_res, fscore_res
 
 
-datasetname=args.dataset_name
+datasetname="gossipcop"
 batch_size = args.batch_size
 max_len = 512
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")

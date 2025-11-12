@@ -1,3 +1,7 @@
-numpy==1.22.4
-torch==1.10.0+cu111
-transformers==4.13.0
+
+transformers==4.44.2
+tqdm==4.66.5
+numpy
+scikit-learn==1.5.2
+pandas
+argparse
